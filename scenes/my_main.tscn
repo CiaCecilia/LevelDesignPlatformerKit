@@ -1,0 +1,256 @@
+[gd_scene load_steps=22 format=3 uid="uid://cwajbk7rcgmt2"]
+
+[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_o2eyd"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_3ubmt"]
+[ext_resource type="Script" path="res://scripts/view.gd" id="3_tlhly"]
+[ext_resource type="PackedScene" uid="uid://bpharv43ulngb" path="res://objects/platform_moving.tscn" id="4_r5mng"]
+[ext_resource type="PackedScene" uid="uid://dbr3dh46cbskt" path="res://objects/wall.tscn" id="6_56yam"]
+[ext_resource type="PackedScene" uid="uid://cxea8lmw7cy1l" path="res://objects/player_kill_volume.tscn" id="7_a15vu"]
+[ext_resource type="PackedScene" uid="uid://c8up71en5djgm" path="res://objects/platform_falling.tscn" id="7_t75lk"]
+[ext_resource type="PackedScene" uid="uid://bs65o07otxbmm" path="res://objects/moving_object_path_3d.tscn" id="9_tk2qd"]
+[ext_resource type="PackedScene" uid="uid://cyvet7kb6y80r" path="res://objects/checkpoint.tscn" id="10_08875"]
+[ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://objects/platform_medium.tscn" id="17_t18hx"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="22_jg4h0"]
+[ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_psiif"]
+[ext_resource type="LabelSettings" uid="uid://daohhjonjrdx8" path="res://themes/label_settings.tres" id="24_15k8u"]
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="25_5ov5j"]
+[ext_resource type="Theme" uid="uid://d3avl0mr4r87l" path="res://themes/default_theme.tres" id="26_xagmh"]
+[ext_resource type="Texture2D" uid="uid://dm50aa4qogm65" path="res://sprites/button_rectangle_depth_gloss.png" id="27_0cjv2"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
+auto_exposure_scale = 0.75
+dof_blur_far_distance = 0.01
+
+[sub_resource type="Curve3D" id="Curve3D_tdwqj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.08205, -4.34275, 9.95511, 0, 0, 0, 0, 0, 0, 6.72689, -1.56147, 22.209),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_ri8jt"]
+font = ExtResource("25_5ov5j")
+font_size = 128
+shadow_color = Color(0, 0, 0, 0.376471)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x4d2s"]
+font = ExtResource("25_5ov5j")
+font_size = 32
+shadow_color = Color(0, 0, 0, 0.376471)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v6r7m"]
+font = ExtResource("25_5ov5j")
+font_size = 42
+shadow_color = Color(0, 0, 0, 0.376471)
+shadow_offset = Vector2(2, 2)
+
+[node name="Main" type="Node3D"]
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+unique_name_in_owner = true
+environment = ExtResource("1_o2eyd")
+camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
+
+[node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_3ubmt")]
+view = NodePath("../View")
+
+[node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
+process_mode = 3
+transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 0, 0, 0)
+script = ExtResource("3_tlhly")
+target = NodePath("../Player")
+
+[node name="Camera" type="Camera3D" parent="View"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+current = true
+fov = 40.0
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="platform-medium" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0433712, 0, 0.0704845)
+
+[node name="platform-medium2" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 2.75157, 0.749875, 2.14303)
+
+[node name="platform-medium3" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(0.791181, 0, 0.611582, 0, 1, 0, -0.611582, 0, 0.791181, 4.85993, 1.79755, 4.47581)
+
+[node name="platform-medium4" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(0.791181, 0, 0.611582, 0, 1, 0, -0.611582, 0, 0.791181, 3.23859, 2.81003, 9.51464)
+
+[node name="platform-medium5" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(0.0318643, 0, -0.999492, 0, 1, 0, 0.999492, 0, 0.0318643, 5.28113, -2.13339, 25.5116)
+
+[node name="platform-medium6" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(-0.339214, 0, -0.940709, 0, 1, 0, 0.940709, 0, -0.339214, 3.29593, -1.38351, 28.2845)
+
+[node name="platform-medium7" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(0.636482, 0, -0.771291, 0, 1, 0, 0.771291, 0, 0.636482, 1.03151, -0.335841, 30.4661)
+
+[node name="platform-medium8" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(0.940447, 0.000776711, -0.339939, 1.59273e-05, 0.999997, 0.0023289, 0.33994, -0.00219562, 0.940445, -2.82454, 0.676645, 31.4317)
+
+[node name="platform-medium9" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(-0.997831, 0, 0.0658211, 0, 1, 0, -0.0658211, 0, -0.997831, -6.10153, 1.97437, 31.3886)
+
+[node name="platform-medium10" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(-0.903118, 0, 0.429392, 0, 1, 0, -0.429392, 0, -0.903118, -8.66744, 2.72425, 29.1423)
+
+[node name="platform-medium11" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(-0.82972, 0, -0.55818, 0, 1, 0, 0.55818, 0, -0.82972, -10.6177, 3.77192, 26.6758)
+
+[node name="platform-medium12" parent="World" instance=ExtResource("17_t18hx")]
+transform = Transform3D(-0.430089, 0.00210934, -0.902784, 1.59272e-05, 0.999997, 0.0023289, 0.902787, 0.000987259, -0.430088, -11.2023, 4.78441, 22.7439)
+
+[node name="wall" parent="World" instance=ExtResource("6_56yam")]
+transform = Transform3D(0.645684, 0, -0.763604, 0, 1, 0, 0.763604, 0, 0.645684, 4.15237, 2.29755, 3.38964)
+
+[node name="wall3" parent="World/wall" instance=ExtResource("6_56yam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625753, -0.0122819, 0.988081)
+
+[node name="wall4" parent="World/wall" instance=ExtResource("6_56yam")]
+transform = Transform3D(0.999062, 0, -0.0433055, 0, 1, 0, 0.0433055, 0, 0.999062, 0.0287242, -0.0134838, -0.829707)
+
+[node name="player_kill_volume" parent="World" instance=ExtResource("7_a15vu")]
+
+[node name="platform-falling_1" parent="World" instance=ExtResource("7_t75lk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.365894, 1.55795, 13.4812)
+
+[node name="platform-moving_1" parent="World" instance=ExtResource("4_r5mng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.365894, -5, 13.4812)
+
+[node name="moving_object_path_1" parent="World" node_paths=PackedStringArray("object_to_move") instance=ExtResource("9_tk2qd")]
+curve = SubResource("Curve3D_tdwqj")
+object_to_move = NodePath("../platform-moving_1")
+movement_speed = 3.0
+look_at_object_when_activated = true
+ping_pong = true
+
+[node name="checkpoint" parent="World" instance=ExtResource("10_08875")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19311, 2.17528, 4.2539)
+
+[node name="checkpoint2" parent="World" instance=ExtResource("10_08875")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21465, -2.05385, 25.5619)
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
+shadow_enabled = true
+shadow_opacity = 0.75
+
+[node name="HUD" type="CanvasLayer" parent="." groups=["HUD"]]
+process_mode = 3
+script = ExtResource("22_jg4h0")
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 67.0
+offset_right = 313.0
+offset_bottom = 323.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_psiif")
+
+[node name="x" type="Label" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 144.0
+offset_bottom = 123.0
+text = "×"
+label_settings = ExtResource("24_15k8u")
+
+[node name="Level Complete" type="Label" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -429.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 287.0
+grow_horizontal = 2
+text = "Level Complete!"
+label_settings = SubResource("LabelSettings_ri8jt")
+
+[node name="CoinsLabel" type="Label" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 144.0
+offset_top = 64.0
+offset_right = 368.0
+offset_bottom = 123.0
+text = "0"
+label_settings = ExtResource("24_15k8u")
+
+[node name="PlayAgainButton" type="Button" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -196.0
+offset_top = -258.0
+offset_right = 196.0
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+theme = ExtResource("26_xagmh")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("25_5ov5j")
+theme_override_font_sizes/font_size = 60
+text = "Play Again?"
+icon = ExtResource("27_0cjv2")
+flat = true
+icon_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_top = 59.0
+offset_right = 48.5
+offset_bottom = 115.0
+grow_horizontal = 2
+text = "00"
+label_settings = SubResource("LabelSettings_x4d2s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeNameLabel" type="Label" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 22.0
+offset_right = 49.0
+offset_bottom = 78.0
+grow_horizontal = 2
+text = "TIME"
+label_settings = SubResource("LabelSettings_v6r7m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
+[connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
+[connection signal="pressed" from="HUD/Control/PlayAgainButton" to="HUD" method="_on_play_again_button_pressed"]
