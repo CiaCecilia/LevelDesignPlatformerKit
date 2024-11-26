@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cwajbk7rcgmt2"]
+[gd_scene load_steps=28 format=3 uid="uid://cwajbk7rcgmt2"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_o2eyd"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_3ubmt"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://c8up71en5djgm" path="res://objects/platform_falling.tscn" id="7_t75lk"]
 [ext_resource type="PackedScene" uid="uid://bs65o07otxbmm" path="res://objects/moving_object_path_3d.tscn" id="9_tk2qd"]
 [ext_resource type="PackedScene" uid="uid://cyvet7kb6y80r" path="res://objects/checkpoint.tscn" id="10_08875"]
-[ext_resource type="PackedScene" uid="uid://dy017k58p20sk" path="res://objects/cloud.tscn" id="10_vmwmi"]
 [ext_resource type="PackedScene" uid="uid://bdm3quh21j64k" path="res://objects/platform_large.tscn" id="11_bkwd6"]
 [ext_resource type="PackedScene" uid="uid://0v6t454aaexr" path="res://objects/door.tscn" id="12_gp8wj"]
 [ext_resource type="PackedScene" uid="uid://dpo3dr26b06w3" path="res://objects/spike_block_wide.tscn" id="13_u1x4l"]
@@ -35,17 +34,17 @@ point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_76kk6"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.3878, 0, 16.8097, 0, 0, 0, 0, 0, 0, -15.3129, 0, 16.7106),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.1433, 8.62505, 19.4971, 0, 0, 0, 0, 0, 0, -11.1578, 16.6254, 16.3335),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_gc2d6"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.0684, 7.83277, 13.7174, 0, 0, 0, 0, 0, 0, -0.740954, -5.47931, 7.30977, 0, 0, 0, 0, 0, 0, 0.0977821, -9.48522, 17.4761),
-"tilts": PackedFloat32Array(0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.6985, 16.0994, 15.1702, 0, 0, 0, 0, 0, 0, -10.8619, -5.47931, 7.55335, 0, 0, 0, 0, 0, 0, 1.72879, -8.03715, 7.38962, 0, 0, 0, 0, 0, 0, -0.221436, -9.79688, 17.4203),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
 }
-point_count = 3
+point_count = 4
 
 [sub_resource type="LabelSettings" id="LabelSettings_ri8jt"]
 font = ExtResource("25_5ov5j")
@@ -149,16 +148,6 @@ transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, 
 [node name="platform-moving_1" parent="World" instance=ExtResource("4_r5mng")]
 transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, -7.35017, -5, 11.1703)
 
-[node name="button2" parent="World" node_paths=PackedStringArray("target") instance=ExtResource("14_rswsj")]
-transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, -20.9176, 9.02081, 8.10884)
-target = NodePath("../door")
-
-[node name="cloud" parent="World" instance=ExtResource("10_vmwmi")]
-transform = Transform3D(2.16235, 0.878417, -1.32044, -1.35424, 2.84668, -0.653282, 1.12971, 1.73111, 1.7443, -20.3009, 9.8596, 8.3449)
-
-[node name="platform-moving_2" parent="World" instance=ExtResource("4_r5mng")]
-transform = Transform3D(0.928205, 0, -0.709899, 0, 1, 0, 0.677355, 0, 0.972801, -20.9444, 8.04833, 8.35065)
-
 [node name="moving_object_path_1" parent="World" node_paths=PackedStringArray("object_to_move") instance=ExtResource("9_tk2qd")]
 transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, 0, 0, 0)
 curve = SubResource("Curve3D_tdwqj")
@@ -166,9 +155,6 @@ object_to_move = NodePath("../platform-moving_1")
 movement_speed = 3.0
 is_on_from_start = false
 ping_pong = true
-
-[node name="platform-moving_3" parent="World" instance=ExtResource("4_r5mng")]
-transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, -19.1012, 8.00299, 5.63136)
 
 [node name="checkpoint1" parent="World" instance=ExtResource("10_08875")]
 transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, 1.60397, 2.17528, 6.28159)
@@ -180,7 +166,7 @@ transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, 
 transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, 0, 0, 0)
 curve = SubResource("Curve3D_76kk6")
 object_to_move = NodePath("../platform-moving_2")
-movement_speed = 5.0
+movement_speed = 3.0
 is_on_from_start = false
 ping_pong = true
 
@@ -252,13 +238,19 @@ transform = Transform3D(0.342332, -0.906072, 0.248687, -0.54439, -0.406998, -0.7
 [node name="spike-block-wide18" parent="World/platform-large" instance=ExtResource("13_u1x4l")]
 transform = Transform3D(-0.0720694, -0.973731, 0.216002, -0.562554, -0.139147, -0.814967, 0.823614, -0.180247, -0.537747, 0.667592, 3.96546, 4.28365)
 
-[node name="button" parent="World" node_paths=PackedStringArray("target") instance=ExtResource("14_rswsj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.1615, 9.08511, 5.65966)
-target = NodePath("../moving_object_path_3")
+[node name="platform-moving_3" parent="World" instance=ExtResource("4_r5mng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8771, 15.2362, 4.85646)
 
-[node name="button3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("14_rswsj")]
-transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, -20.8551, 14.3229, 9.15297)
-target = NodePath("../World/moving_object_path_3")
+[node name="button_3" parent="World/platform-moving_3" node_paths=PackedStringArray("target") instance=ExtResource("14_rswsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.172489, 0.645728, -0.106881)
+target = NodePath("../../moving_object_path_3")
+
+[node name="platform-moving_2" parent="World" instance=ExtResource("4_r5mng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0568, 8.43938, 8.06701)
+
+[node name="button_2" parent="World/platform-moving_2" node_paths=PackedStringArray("target") instance=ExtResource("14_rswsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.172489, 0.645728, -0.106881)
+target = NodePath("../../moving_object_path_2")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
