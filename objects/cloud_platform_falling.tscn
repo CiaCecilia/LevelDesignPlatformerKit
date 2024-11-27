@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://cdjoifc1x2fii"]
+[gd_scene load_steps=16 format=4 uid="uid://cdjoifc1x2fii"]
 
 [ext_resource type="PackedScene" uid="uid://biyd6x403gvny" path="res://models/core_models/platform-falling.glb" id="1_iqw72"]
 [ext_resource type="Script" path="res://objects/platform_falling.gd" id="2_2qrky"]
 [ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="3_aqseq"]
+[ext_resource type="Material" uid="uid://doj2c7rl5cufi" path="res://Material/lighter_light_grey_material.tres" id="4_2tvk5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t551e"]
 size = Vector3(2, 0.1, 2)
@@ -167,5 +168,6 @@ libraries = {
 transform = Transform3D(2.38985, 0, 0, 0, 1.0312, 0, 0, 0, 2.30584, 0, -0.249411, 0)
 mesh = SubResource("ArrayMesh_kau0n")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_2tvk5")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]
