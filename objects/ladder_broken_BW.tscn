@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqyo0l3wovjgx"]
+
+[ext_resource type="PackedScene" uid="uid://cppammvyojl7" path="res://models/props/ladder-broken.glb" id="1_r60gk"]
+[ext_resource type="Material" uid="uid://4ob83eiqmfkr" path="res://Material/grey_material_3d.tres" id="2_yl0st"]
+
+[node name="ladder-broken2" instance=ExtResource("1_r60gk")]
+
+[node name="ladder-broken" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_yl0st")

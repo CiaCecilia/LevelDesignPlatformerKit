@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://d01wbr0fv34ia"]
+
+[ext_resource type="PackedScene" uid="uid://biyd6x403gvny" path="res://models/core_models/platform-falling.glb" id="1_acgun"]
+[ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="2_rekk1"]
+[ext_resource type="PackedScene" uid="uid://crjxc823ldoc3" path="res://models/props/flowers.glb" id="3_se2sa"]
+[ext_resource type="PackedScene" uid="uid://uakeedppa6m1" path="res://models/props/heart.glb" id="4_djgp5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xec8c"]
+albedo_texture = ExtResource("2_rekk1")
+uv1_offset = Vector3(2.97, 0, 0)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8y38s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cypsh"]
+size = Vector3(2, 0.5, 2)
+
+[node name="platform-moving" instance=ExtResource("1_acgun")]
+
+[node name="platform-falling2" parent="." index="0"]
+visible = false
+surface_material_override/0 = SubResource("StandardMaterial3D_xec8c")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+physics_material_override = SubResource("PhysicsMaterial_8y38s")
+sync_to_physics = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
+shape = SubResource("BoxShape3D_cypsh")
+
+[node name="flowers" parent="." index="2" instance=ExtResource("3_se2sa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.154965, 0.5, 0.0808842)
+
+[node name="flowers2" parent="." index="3" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.658558, 0, -0.75253, 0, 1, 0, 0.75253, 0, 0.658558, -0.225122, 0.5, 0.0808842)
+
+[node name="flowers3" parent="." index="4" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.658558, 0, -0.75253, 0, 1, 0, 0.75253, 0, 0.658558, 0.110125, 0.5, -0.250034)
+
+[node name="flowers4" parent="." index="5" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.35006, 0, -0.936727, 0, 1, 0, 0.936727, 0, 0.35006, 0.331123, 0.5, -0.0537336)
+
+[node name="flowers5" parent="." index="6" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.35006, 0, -0.936727, 0, 1, 0, 0.936727, 0, 0.35006, 0.061733, 0.5, 0.131931)
+
+[node name="heart2" parent="." index="7" instance=ExtResource("4_djgp5")]
+transform = Transform3D(4.86638, 0, 0, 0, 1.06277, 1.07202, 0, -4.65973, 0.244501, 0.142533, 0.35982, 0.0747681)
+
+[node name="heart3" parent="." index="8" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-0.184171, -4.4239, 0.414039, 0.0856299, 1.79776, 1.01861, -4.86214, 0.199232, 0.00225616, 0.404217, 0.120811, 0.0461787)
+
+[node name="heart4" parent="." index="9" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-4.86014, -0.240887, 0.0052591, -0.0210316, 0.855522, 1.08178, -0.245474, 4.69602, -0.196809, 0.197398, 0.35982, -0.117799)
+
+[node name="heart5" parent="." index="10" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-0.0619536, 4.4266, -0.414371, 0.0726147, 1.80193, 1.01827, 4.86544, 0.0294725, -0.0204737, -0.128456, 0.120811, 0.120644)

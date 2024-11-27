@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://0v6t454aaexr"]
+[gd_scene load_steps=6 format=3 uid="uid://0v6t454aaexr"]
 
 [ext_resource type="PackedScene" uid="uid://ctsyh8fjntx7y" path="res://models/props/door-rotate-large.glb" id="1_ue8vn"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_lc1yq"]
+[ext_resource type="Material" uid="uid://bdpuc0se2ty43" path="res://Material/light_grey_material_3d.tres" id="3_r7wnk"]
+[ext_resource type="Material" uid="uid://dcsron2k32rpe" path="res://Material/dark_grey_material_3d.tres" id="4_p0heu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2844u"]
 size = Vector3(2, 2, 0.5)
@@ -12,9 +14,11 @@ script = ExtResource("2_lc1yq")
 
 [node name="door-rotate-large" parent="." index="0"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+surface_material_override/0 = ExtResource("3_r7wnk")
 
 [node name="door" parent="door-rotate-large" index="0"]
 transform = Transform3D(1, 0, -3.87541e-16, 0, 1, 0, 3.87541e-16, 0, 1, -0.3, 3.53243e-18, -2.38418e-08)
+surface_material_override/0 = ExtResource("4_p0heu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
 
