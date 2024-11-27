@@ -1,8 +1,9 @@
-[gd_scene load_steps=55 format=3 uid="uid://dtgqdi6x27lh0"]
+[gd_scene load_steps=58 format=3 uid="uid://dtgqdi6x27lh0"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_7vbqi"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_8wlm0"]
 [ext_resource type="PackedScene" uid="uid://dclbr6h5m4kw8" path="res://models/prototyping/models/wheelchair.glb" id="3_ari4f"]
+[ext_resource type="ArrayMesh" uid="uid://deu06eho4c74" path="res://vfx_meshes/dust.res" id="3_hhgy3"]
 [ext_resource type="Script" path="res://scripts/view.gd" id="4_yt7cu"]
 [ext_resource type="PackedScene" uid="uid://3j4trigy1pb2" path="res://models/prototyping/models/vehicle.glb" id="5_6jfdx"]
 [ext_resource type="PackedScene" uid="uid://6n42nnf84i57" path="res://models/props/key.glb" id="6_1gqr7"]
@@ -52,6 +53,19 @@
 auto_exposure_scale = 0.75
 dof_blur_far_distance = 0.01
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7stj"]
+diffuse_mode = 2
+specular_mode = 2
+metallic_specular = 0.0
+backlight = Color(0, 0.521569, 0.709804, 1)
+billboard_keep_scale = true
+grow_amount = 1.882
+proximity_fade_distance = 0.25
+
+[sub_resource type="Curve" id="Curve_xh1e2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.249284, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [sub_resource type="Curve3D" id="Curve3D_tdwqj"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.638975, -1.614, 11.9434, 0, 0, 0, 0, 0, 0, 5.47739, 5.57464, 22.5531),
@@ -99,23 +113,145 @@ environment = ExtResource("1_7vbqi")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_8wlm0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6419, 11.703, 25.0023)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5781, -0.942612, -4.63734)
 view = NodePath("../View")
 
 [node name="leg-left" parent="Player/Character/character/root" index="0"]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0.125, 0.17625, -0.02375)
+visible = false
 
 [node name="leg-right" parent="Player/Character/character/root" index="1"]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -0.125, 0.17625, -0.02375)
+visible = false
 
 [node name="torso" parent="Player/Character/character/root" index="2"]
 transform = Transform3D(1, 0, 0, 0, 0.996194, 0.0871557, 0, -0.0871557, 0.996194, -1.80478e-15, 0.17625, -0.02375)
 
 [node name="arm-left" parent="Player/Character/character/root/torso" index="0"]
 transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 0.3, 0.175, 0)
+visible = false
 
 [node name="arm-right" parent="Player/Character/character/root/torso" index="1"]
 transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, -0.3, 0.1195, 0)
+visible = false
+
+[node name="antenna" parent="Player/Character/character/root/torso" index="2"]
+visible = false
+
+[node name="ParticlesTrail" parent="Player" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104643, 0.20765, 0.246077)
+
+[node name="ParticlesTrail3" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.142681, 0.677137, -0.198374)
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+mesh = ExtResource("3_hhgy3")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_amount_min = 0.75
+scale_amount_curve = SubResource("Curve_xh1e2")
+
+[node name="ParticlesTrail4" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.262552, 0.459842, 0.0305901)
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+mesh = ExtResource("3_hhgy3")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_amount_min = 0.75
+scale_amount_curve = SubResource("Curve_xh1e2")
+
+[node name="ParticlesTrail5" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.354801, 0.321463, 0.0305901)
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+mesh = ExtResource("3_hhgy3")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_amount_min = 0.75
+scale_amount_curve = SubResource("Curve_xh1e2")
+
+[node name="ParticlesTrail7" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.180124, 0.441257, -0.475742)
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+mesh = ExtResource("3_hhgy3")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_amount_min = 0.75
+scale_amount_curve = SubResource("Curve_xh1e2")
+
+[node name="ParticlesTrail8" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111198, 0.441257, -0.475742)
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+mesh = ExtResource("3_hhgy3")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_amount_min = 0.75
+scale_amount_curve = SubResource("Curve_xh1e2")
+
+[node name="ParticlesTrail9" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0319958, 0.798033, 0.241751)
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+mesh = ExtResource("3_hhgy3")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_amount_min = 0.75
+scale_amount_curve = SubResource("Curve_xh1e2")
+
+[node name="ParticlesTrail10" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0247197, -0.0675406, -0.313042)
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+mesh = ExtResource("3_hhgy3")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_amount_min = 0.75
+scale_amount_curve = SubResource("Curve_xh1e2")
+
+[node name="ParticlesTrail11" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0388927, 0.10533, 0.111263)
+material_override = SubResource("StandardMaterial3D_q7stj")
+cast_shadow = 0
+amount = 60
+mesh = ExtResource("3_hhgy3")
+emission_shape = 1
+emission_sphere_radius = 0.2
+particle_flag_align_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0.1, 0)
+scale_amount_min = 0.75
+scale_amount_curve = SubResource("Curve_xh1e2")
 
 [node name="wheelchair2" parent="Player" instance=ExtResource("3_ari4f")]
 transform = Transform3D(-0.00382221, 0, 1.5, 0, 1.5, 0, -1.5, 0, -0.00382221, 0, -0.0473828, -0.220067)
@@ -779,6 +915,9 @@ text = "TIME"
 label_settings = SubResource("LabelSettings_v6r7m")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="checkpoint" parent="." instance=ExtResource("33_47e62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19964, 1.98768, 6.22864)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
