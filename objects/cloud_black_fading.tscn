@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw157h7sstjad"]
+
+[ext_resource type="PackedScene" uid="uid://bsrmqj84lksd7" path="res://models/core_models/cloud.glb" id="1_celma"]
+[ext_resource type="Script" path="res://objects/cloud.gd" id="2_v3la2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mf7t"]
+albedo_color = Color(0, 0, 0, 1)
+proximity_fade_distance = 0.01
+distance_fade_mode = 1
+distance_fade_min_distance = 10.0
+distance_fade_max_distance = 20.0
+
+[node name="cube" instance=ExtResource("1_celma")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+script = ExtResource("2_v3la2")
+
+[node name="cube2" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_2mf7t")
