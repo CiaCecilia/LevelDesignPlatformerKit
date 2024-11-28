@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfdp1fm1p8gar"]
+
+[ext_resource type="PackedScene" uid="uid://b8qcgoowovf04" path="res://objects/shark_spike_block_wide.tscn" id="1_ssklt"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_syfjw"]
+height = 5.51384
+radius = 0.460545
+
+[node name="Shark" type="Node3D"]
+
+[node name="spike-block-wide" parent="." instance=ExtResource("1_ssklt")]
+transform = Transform3D(0.395616, -0.0597959, -0.916468, 0.149449, 0.988769, -5.87894e-09, 0.906175, -0.136965, 0.40011, -0.203196, 0, -2.18607)
+
+[node name="spike-block-wide2" parent="." instance=ExtResource("1_ssklt")]
+transform = Transform3D(0.357214, 0.180238, -0.916468, -0.450472, 0.89279, -2.42989e-07, 0.818213, 0.412843, 0.40011, -0.0291016, 0.764182, -2.23033)
+
+[node name="spike-block-wide3" parent="." instance=ExtResource("1_ssklt")]
+transform = Transform3D(0.362489, 0.0137037, -0.931888, -0.0377774, 0.999286, 1.73707e-08, 0.931222, 0.0352043, 0.362748, 1.5199, -0.0736331, 1.32309)
+
+[node name="spike-block-wide4" parent="." instance=ExtResource("1_ssklt")]
+transform = Transform3D(0.399824, 0.0151151, -0.916468, -0.0377774, 0.999286, 1.94564e-08, 0.915813, 0.0346217, 0.40011, 0.782367, 0, -0.404057)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(0.907279, -0.420529, -1.83819e-08, 0, -4.37114e-08, 1, -0.420529, -0.907279, -3.96584e-08, 0.731765, 1, -0.567174)
+shape = SubResource("CylinderShape3D_syfjw")
