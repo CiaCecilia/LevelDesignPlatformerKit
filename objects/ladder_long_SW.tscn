@@ -1,18 +1,77 @@
-[gd_scene load_steps=4 format=3 uid="uid://b36jf5an84wmy"]
+[gd_scene load_steps=8 format=3 uid="uid://b36jf5an84wmy"]
 
 [ext_resource type="PackedScene" uid="uid://b87snreold7v2" path="res://models/props/ladder-long.glb" id="1_eipa0"]
-[ext_resource type="Material" uid="uid://dcsron2k32rpe" path="res://Material/dark_grey_material_3d.tres" id="2_rlfxy"]
+[ext_resource type="Script" path="res://objects/platform_falling.gd" id="2_r3whe"]
+[ext_resource type="Material" uid="uid://doj2c7rl5cufi" path="res://Material/lighter_light_grey_material.tres" id="3_1a5de"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xcale"]
 size = Vector3(0.521912, 2.00125, 0.262756)
 
+[sub_resource type="Animation" id="Animation_py1y8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("platform-falling2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4ywbb"]
+resource_name = "rspawn"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("platform-falling2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.25, 1.25, 1.25), Vector3(1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"restore_platform"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mmy7m"]
+_data = {
+"RESET": SubResource("Animation_py1y8"),
+"respawn": SubResource("Animation_4ywbb")
+}
+
 [node name="ladder-long2" instance=ExtResource("1_eipa0")]
+script = ExtResource("2_r3whe")
 
 [node name="ladder-long" parent="." index="0"]
-surface_material_override/0 = ExtResource("2_rlfxy")
+surface_material_override/0 = ExtResource("3_1a5de")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0159607, 1.00713, 0.00741577)
 shape = SubResource("BoxShape3D_xcale")
+
+[node name="FallingPlatformAnimationPlayer" type="AnimationPlayer" parent="StaticBody3D" index="1"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_mmy7m")
+}
