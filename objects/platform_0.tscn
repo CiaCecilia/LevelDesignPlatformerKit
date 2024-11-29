@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bquu1w6urf658"]
+[gd_scene load_steps=9 format=3 uid="uid://bquu1w6urf658"]
 
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://objects/platform_medium.tscn" id="1_ffpkg"]
 [ext_resource type="PackedScene" uid="uid://chqgqgdxmnujr" path="res://objects/vehicle.tscn" id="2_qudmw"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cb0jdactv4w6p" path="res://objects/key_2.tscn" id="5_fc1uy"]
 [ext_resource type="PackedScene" uid="uid://bqyo0l3wovjgx" path="res://objects/ladder_broken_BW.tscn" id="6_4pxoe"]
 [ext_resource type="PackedScene" uid="uid://dbr3dh46cbskt" path="res://objects/wall.tscn" id="7_g4fw5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ckb4v"]
+size = Vector3(2.69214, 1, 2.54126)
 
 [node name="Platform_2" type="Node"]
 
@@ -73,3 +76,9 @@ transform = Transform3D(0.984087, -0.175276, -0.0291645, 0.0259876, -0.0203939, 
 
 [node name="wall" parent="." instance=ExtResource("7_g4fw5")]
 transform = Transform3D(-0.0157561, -0.888445, 0.458712, 0.999843, -0.0177316, 0, 0.0081337, 0.458639, 0.888585, -3.53138, -0.673348, -1.28569)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.888769, 0, 0.458355, 0, 1, 0, -0.458355, 0, 0.888769, -3.01502, -0.707394, -2.01344)
+shape = SubResource("BoxShape3D_ckb4v")

@@ -615,9 +615,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5876, 9.73699, 13.7354)
 [node name="checkpoint" parent="World/Part2" instance=ExtResource("34_b2vtl")]
 transform = Transform3D(0.969723, 0, -0.244207, 0, 1, 0, 0.244207, 0, 0.969723, -21.7491, 11.6475, 12.7965)
 
-[node name="platform-medium5" parent="World/Part2" instance=ExtResource("10_gv1mx")]
-transform = Transform3D(-0.879407, 0, -0.476069, 0, 1, 0, 0.476069, 0, -0.879407, -10.6079, 6.7828, 16.3827)
-
 [node name="platform-medium14" parent="World/Part2" instance=ExtResource("10_gv1mx")]
 transform = Transform3D(-0.959683, 0, 0.281085, 0, 1, 0, -0.281085, 0, -0.959683, -19.9851, 12.0404, 6.95356)
 
@@ -825,6 +822,73 @@ open_door_with_coins = 5
 [node name="door_03" parent="World/Part2" instance=ExtResource("14_majc8")]
 transform = Transform3D(-0.255547, -0.966797, 0, 0.966797, -0.255547, 0, 0, 0, 1, -20.3721, 12.6218, 10.8315)
 open_door_with_coins = 8
+
+[node name="platform-ramp8" parent="World/Part2" instance=ExtResource("53_o6qqd")]
+transform = Transform3D(0.820722, 0.53868, -0.190363, -0.424768, 0.352493, -0.833859, -0.382082, 0.765227, 0.518114, -22.8066, 26.5948, 23.9903)
+
+[node name="platform-ramp9" parent="World/Part2" instance=ExtResource("53_o6qqd")]
+transform = Transform3D(0.716119, 0.31557, 0.622567, 0.440445, 0.487633, -0.753805, -0.541463, 0.81402, 0.210212, -24.6493, 26.5948, 24.4794)
+
+[node name="PlatformPart2_01" type="Node" parent="World/Part2"]
+
+[node name="vehicle-convertible2" parent="World/Part2/PlatformPart2_01" instance=ExtResource("35_7o58i")]
+transform = Transform3D(0.644938, 0, 0.764235, 0, 1, 0, -0.764235, 0, 0.644938, -11.4004, 6.73162, 15.9951)
+
+[node name="ladder-broken3" parent="World/Part2/PlatformPart2_01" instance=ExtResource("36_0g4tj")]
+transform = Transform3D(0.908034, 0.418691, -0.013136, 8.43556e-10, -0.0313584, -0.999508, -0.418897, 0.907587, -0.0284745, -11.5283, 7.01411, 16.6655)
+
+[node name="ladder-long6" parent="World/Part2/PlatformPart2_01" instance=ExtResource("37_fhnkk")]
+transform = Transform3D(-0.269786, 0.792683, 0.54669, -0.592307, 0.311017, -0.743263, -0.759202, -0.52433, 0.385604, -10.8993, 6.57996, 18.1057)
+
+[node name="platform-medium15" parent="World/Part2/PlatformPart2_01" instance=ExtResource("10_gv1mx")]
+transform = Transform3D(0.848011, -0.074458, 0.524721, 0.157038, 0.980922, -0.114598, -0.506177, 0.179581, 0.843525, -10.4058, 6.79719, 16.2867)
+visible = false
+
+[node name="wheelchair4" parent="World/Part2/PlatformPart2_01" instance=ExtResource("12_exapx")]
+transform = Transform3D(0.644936, -0.763373, -0.0362935, 1.62423e-06, -0.0474899, 0.998871, -0.764237, -0.644211, -0.030628, -8.69964, 7.36986, 16.938)
+
+[node name="poles4" parent="World/Part2/PlatformPart2_01" instance=ExtResource("13_bnxsl")]
+transform = Transform3D(0.644937, -0.754933, 0.118881, 1.49012e-06, 0.155555, 0.987827, -0.764237, -0.637088, 0.100324, -10.2014, 7.18793, 16.2036)
+
+[node name="shape-cube-half6" parent="World/Part2/PlatformPart2_01" instance=ExtResource("14_g3su7")]
+transform = Transform3D(0.644938, 1.1388e-08, 0.764235, -4.47035e-08, 1, 7.45058e-09, -0.764235, 9.61032e-09, 0.644938, -10.0456, 6.77185, 15.3135)
+
+[node name="fence-broken5" parent="World/Part2/PlatformPart2_01" instance=ExtResource("15_x385b")]
+transform = Transform3D(0.698339, 0.642979, 0.314485, -0.348866, -0.077885, 0.93393, 0.624993, -0.761915, 0.169925, -10.2301, 7.13796, 15.1258)
+
+[node name="key6" parent="World/Part2/PlatformPart2_01" instance=ExtResource("16_pinw5")]
+transform = Transform3D(0.376837, -0.924279, 0.0608396, 1.626e-06, 0.0656817, 0.99784, -0.92628, -0.376025, 0.0247515, -9.81468, 7.21811, 15.9351)
+
+[node name="key7" parent="World/Part2/PlatformPart2_01" instance=ExtResource("16_pinw5")]
+transform = Transform3D(-0.292606, -0.954168, 0.062807, 1.53653e-06, 0.0656817, 0.997841, -0.956234, 0.291974, -0.0192188, -9.71353, 6.88658, 15.8152)
+
+[node name="platform-ramp6" parent="World/Part2/PlatformPart2_01" instance=ExtResource("53_o6qqd")]
+transform = Transform3D(0.881033, -0.322569, 0.34602, 0.182428, 0.906559, 0.38062, -0.436463, -0.272216, 0.857555, -9.42288, 7.07308, 16.3659)
+
+[node name="wheelchair5" parent="World/Part2/PlatformPart2_01" instance=ExtResource("12_exapx")]
+transform = Transform3D(-0.594007, 0.775577, -0.213622, -0.387965, -0.0435607, 0.920643, 0.704726, 0.629749, 0.326771, -11.6242, 7.06965, 16.1989)
+
+[node name="poles5" parent="World/Part2/PlatformPart2_01" instance=ExtResource("13_bnxsl")]
+transform = Transform3D(-0.594008, 0.716328, -0.366098, -0.387965, 0.143578, 0.910421, 0.704726, 0.682832, 0.192622, -10.2129, 7.21664, 16.3194)
+
+[node name="shape-cube-half7" parent="World/Part2/PlatformPart2_01" instance=ExtResource("14_g3su7")]
+transform = Transform3D(-0.594009, -0.250213, -0.764557, -0.387967, 0.921674, -0.000209764, 0.704725, 0.296496, -0.644556, -10.1089, 6.37405, 17.623)
+
+[node name="fence-broken6" parent="World/Part2/PlatformPart2_01" instance=ExtResource("15_x385b")]
+transform = Transform3D(-0.612738, -0.572717, -0.544562, -0.311163, -0.458573, 0.832399, -0.726451, 0.679492, 0.102773, -10.0148, 6.70202, 17.9178)
+
+[node name="key8" parent="World/Part2/PlatformPart2_01" instance=ExtResource("16_pinw5")]
+transform = Transform3D(-0.328308, 0.892426, -0.309497, -0.368863, 0.180513, 0.911786, 0.869572, 0.41351, 0.269919, -10.4683, 6.91173, 17.1534)
+
+[node name="key9" parent="World/Part2/PlatformPart2_01" instance=ExtResource("16_pinw5")]
+transform = Transform3D(0.320483, 0.895203, -0.30968, -0.210129, 0.385967, 0.898262, 0.923655, -0.222806, 0.311803, -10.4786, 6.54532, 17.1657)
+
+[node name="platform-ramp7" parent="World/Part2/PlatformPart2_01" instance=ExtResource("53_o6qqd")]
+transform = Transform3D(-0.839869, -0.0631823, -0.539098, -0.268645, 0.91141, 0.311709, 0.471644, 0.40662, -0.78244, -10.8997, 6.96555, 16.6239)
+
+[node name="platform-medium5" parent="World/Part2/PlatformPart2_01" instance=ExtResource("10_gv1mx")]
+transform = Transform3D(-0.879407, 0, -0.476069, 0, 1, 0, 0.476069, 0, -0.879407, -10.6079, 6.7828, 16.3827)
+visible = false
 
 [node name="Part3" type="Node" parent="World"]
 
