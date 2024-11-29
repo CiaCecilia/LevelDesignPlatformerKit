@@ -7,11 +7,11 @@
 albedo_color = Color(0.0269895, 0.181981, 0.198585, 1)
 proximity_fade_distance = 0.01
 distance_fade_mode = 1
-distance_fade_min_distance = 5.0
-distance_fade_max_distance = 15.0
+distance_fade_min_distance = 20.0
+distance_fade_max_distance = 25.0
 
 [node name="cube" instance=ExtResource("1_5y3lh")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 script = ExtResource("2_84l0h")
 
 [node name="cube2" parent="." index="0"]

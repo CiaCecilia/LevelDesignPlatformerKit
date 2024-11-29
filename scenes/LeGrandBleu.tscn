@@ -138,7 +138,7 @@ transform = Transform3D(0.999344, 0.0362251, 0, -0.0362251, 0.999344, 0, 0, 0, 1
 view = NodePath("../View")
 
 [node name="ParticlesTrail" parent="Player" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104643, 0.20765, 0.246077)
+transform = Transform3D(0.948921, -0.00185154, -0.315508, -0.00185155, 0.999933, -0.0114368, 0.315508, 0.0114368, 0.948854, -0.0506873, 0.424029, 0.287275)
 amount = 100
 lifetime = 0.94
 speed_scale = 0.1
@@ -1175,9 +1175,6 @@ transform = Transform3D(-0.856052, -0.374258, 0.356517, -0.268645, 0.91141, 0.31
 transform = Transform3D(0.920654, 0, -0.390377, 0, 1, 0, 0.390377, 0, 0.920654, -11.0419, 0.132204, -0.834982)
 visible = false
 
-[node name="checkpoint1" parent="World/Part3" instance=ExtResource("34_b2vtl")]
-transform = Transform3D(0.920654, 0, -0.390377, 0, 1, 0, 0.390377, 0, 0.920654, -4.04989, 7.30748, -7.48766)
-
 [node name="checkpoint2" parent="World/Part3" instance=ExtResource("34_b2vtl")]
 transform = Transform3D(0.920654, 0, -0.390377, 0, 1, 0, 0.390377, 0, 0.920654, -11.2721, 6.8302, 16.9914)
 
@@ -1219,7 +1216,7 @@ curve = SubResource("Curve3D_gr263")
 object_to_move = NodePath("../Shark")
 
 [node name="Shark" parent="World/Part3" instance=ExtResource("43_rhdl4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.904528, -2.15404, -5.41982)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33223, -1.83442, -11.7905)
 
 [node name="ladder-long2" parent="World/Part3" instance=ExtResource("37_fhnkk")]
 transform = Transform3D(0.677498, -0.277557, -0.681145, 0.577097, 0.774749, 0.258307, 0.456022, -0.568089, 0.685069, -21.1465, 16.0319, -9.23447)
@@ -2711,15 +2708,12 @@ preprocess = 0.65
 process_material = SubResource("ParticleProcessMaterial_pjij8")
 draw_pass_1 = SubResource("SphereMesh_gibmh")
 
-[node name="cube" parent="World/Dressing" instance=ExtResource("41_opmb7")]
-transform = Transform3D(2.64982, -1.9553, 3.76235, 0, 4.43662, 2.30572, -4.2401, -1.22195, 2.35125, -2.78649, 0, -9.17867)
-
 [node name="player_kill_volume" parent="." instance=ExtResource("46_5ksp0")]
 transform = Transform3D(0.807784, 0, -0.589478, 0, 1, 0, 0.589478, 0, 0.807784, 0, -20, 0)
 death_height = -20.0
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, -18.7078, 25.1448, 9.29328)
+transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, -18.4136, 24.5758, 9.19033)
 light_color = Color(0.11441, 0.325483, 0.294307, 1)
 shadow_enabled = true
 shadow_opacity = 0.75
