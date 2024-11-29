@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bapldfrhacuh7"]
+
+[resource]
+albedo_color = Color(0.148603, 0.188568, 0.157125, 1)
+distance_fade_mode = 1
+distance_fade_max_distance = 2.0

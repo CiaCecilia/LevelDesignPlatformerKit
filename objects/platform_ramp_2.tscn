@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bch4dympxjk2n"]
+
+[ext_resource type="PackedScene" uid="uid://3yuxff1xl0x2" path="res://models/props/platform-ramp.glb" id="1_via54"]
+[ext_resource type="Material" uid="uid://bapldfrhacuh7" path="res://Material/dark_brown_material_3d.tres" id="2_qfe2q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5bmom"]
+size = Vector3(0.998901, 0.132446, 1)
+
+[node name="platform-ramp2" instance=ExtResource("1_via54")]
+
+[node name="platform-ramp" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_qfe2q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="platform-ramp" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platform-ramp/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.920519, -0.390699, 0, 0.390699, 0.920519, -0.000549316, 0.307236, 0.00102539)
+shape = SubResource("BoxShape3D_5bmom")

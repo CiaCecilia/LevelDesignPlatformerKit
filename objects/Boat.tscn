@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://da0jdvukdasu8"]
+
+[ext_resource type="PackedScene" uid="uid://ugndbo13ctw6" path="res://models/prototyping/models/shape-hollow-cylinder-half-detailed.glb" id="1_pxpk3"]
+[ext_resource type="Material" uid="uid://6hp742bx8xw5" path="res://Material/darker_grey_material_3d.tres" id="2_a26ad"]
+
+[node name="shape-hollow-cylinder-half-detailed2" instance=ExtResource("1_pxpk3")]
+transform = Transform3D(-0.578201, 5.97207, 0, -5.97207, -0.578201, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="shape-hollow-cylinder-half-detailed" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_a26ad")
