@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddxucbklr3kpa"]
+
+[ext_resource type="PackedScene" uid="uid://c0e27836xgmhi" path="res://objects/character.tscn" id="2_4atkx"]
+[ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="3_i3u72"]
+[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_7i3nm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
+radius = 0.3
+height = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wmioh"]
+size = Vector3(0.25, 0.469604, 0.25)
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+collision_layer = 3
+collision_mask = 9
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+shape = SubResource("CapsuleShape3D_gdq8c")
+
+[node name="Character" parent="." instance=ExtResource("2_4atkx")]
+
+[node name="ButtonPresserArea3D" type="Area3D" parent="Character"]
+collision_layer = 4
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Character/ButtonPresserArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109802, 0)
+shape = SubResource("BoxShape3D_wmioh")
+
+[node name="Shadow" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
+size = Vector3(1, 2, 1)
+texture_albedo = ExtResource("3_i3u72")
+modulate = Color(1, 1, 1, 0.705882)
+normal_fade = 0.5
+
+[node name="SoundFootsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7i3nm")
+volume_db = -5.0
+pitch_scale = 1.25
+autoplay = true
+
+[editable path="Character"]

@@ -1,0 +1,1071 @@
+[gd_scene load_steps=11 format=3 uid="uid://dqki0eqhmcfjv"]
+
+[ext_resource type="PackedScene" uid="uid://ch54hxnoado4n" path="res://objects/car_02.tscn" id="1_c4e26"]
+[ext_resource type="Script" path="res://objects/cloud.gd" id="1_ydbkx"]
+[ext_resource type="PackedScene" uid="uid://crv1t7lrqdkx0" path="res://objects/fence_broken_2.tscn" id="2_8t62f"]
+[ext_resource type="PackedScene" uid="uid://bqyo0l3wovjgx" path="res://objects/ladder_broken_BW.tscn" id="3_pspr3"]
+[ext_resource type="PackedScene" uid="uid://bch4dympxjk2n" path="res://objects/platform_ramp_2.tscn" id="4_aq3r7"]
+[ext_resource type="PackedScene" uid="uid://b36jf5an84wmy" path="res://objects/ladder_long_SW.tscn" id="5_eum3g"]
+[ext_resource type="PackedScene" uid="uid://chqgqgdxmnujr" path="res://objects/vehicle.tscn" id="6_85ffg"]
+[ext_resource type="PackedScene" uid="uid://dbr3dh46cbskt" path="res://objects/wall.tscn" id="7_h6hfg"]
+[ext_resource type="PackedScene" uid="uid://dcdg712lcyl0r" path="res://objects/wheelchair_2.tscn" id="8_t1f87"]
+[ext_resource type="PackedScene" uid="uid://b8cnpjl0np7tt" path="res://objects/poles_2.tscn" id="9_1tdjg"]
+
+[node name="Dressing" type="Node"]
+
+[node name="vehicle-convertible2" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.418689, 0.881206, 0.219487, -0.796936, -0.240647, -0.55406, -0.435423, -0.406895, 0.803022, 0.873603, 1.67744, -3.33213)
+
+[node name="fence-broken2" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.876398, -0.447173, -0.178785, 0.40379, 0.884621, -0.233235, 0.262453, 0.132215, 0.955844, 2.98678, 1.77452, 18.3025)
+script = ExtResource("1_ydbkx")
+
+[node name="ladder-broken2" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(1, 0, 0, 0, -0.101647, 0.994821, 0, -0.994821, -0.101647, 2.38687, 0, -0.233904)
+
+[node name="platform-ramp8" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.505269, 0.652781, 0.564429, 0.562859, -0.246494, 0.788943, 0.654135, 0.716322, -0.242878, 5.09344, 1.07258, 0.84077)
+
+[node name="platform-ramp9" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.94962, 0.0802289, -0.30296, -0.307903, -0.419135, 0.85412, -0.0584564, 0.904372, 0.422723, 0.524637, -1.43924, -3.83298)
+
+[node name="ladder-long2" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.412834, 0, 0.910806, -0.346714, 0.924712, 0.157152, -0.842234, -0.380667, 0.381753, -1.23845, 0, -5.20489)
+
+[node name="vehicle" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.300856, 0.95367, 0, -0.850345, -0.26826, 0.452715, 0.43174, 0.136202, 0.891655, -2.77019, 0.295213, -7.39471)
+
+[node name="wall" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02828, -3.12895, -6.1678)
+
+[node name="wheelchair2" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97137, 4.76837e-07, -7.32326)
+
+[node name="ladder-broken3" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.605608, -0.0236885, 0.79541, 0.3951, -0.8766, 0.274715, 0.690749, 0.480636, 0.540236, -4.20291, -4.76837e-07, -8.41084)
+
+[node name="vehicle-convertible3" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.47436, 0.59012, 0.653254, -0.803262, 0.593777, 0.0468976, -0.360212, -0.54698, 0.755686, -1.27505, 0.707539, -4.7377)
+
+[node name="fence-broken3" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.907728, -0.419162, -0.0183016, 0.40379, 0.884621, -0.233235, 0.113953, 0.204324, 0.972249, 6.34038, 0.54997, 16.2499)
+
+[node name="ladder-broken4" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.986239, 0, 0.165323, 0, 1, 0, -0.165323, 0, 0.986239, 2.68423, -1.22455, -1.93228)
+
+[node name="platform-ramp10" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.805978, 0.0479631, 0.589999, 0.562859, -0.246494, 0.788943, 0.183271, 0.967956, 0.171673, 5.53122, -0.151974, -1.31986)
+
+[node name="platform-ramp11" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.946217, 0.228638, -0.228906, -0.307903, -0.419135, 0.85412, 0.0993421, 0.878664, 0.466992, 0.252611, -2.66379, -5.17397)
+
+[node name="ladder-long3" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.693163, -0.365476, 0.621251, -0.346714, 0.924712, 0.157152, -0.631914, -0.106464, -0.767691, -1.71302, -1.22455, -6.23552)
+
+[node name="vehicle2" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.270379, -0.955137, 0.120864, 0.837114, -0.295243, -0.460513, 0.475538, -0.0233359, 0.879386, -3.25397, -0.929338, -7.62826)
+
+[node name="wall2" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.986239, 0, 0.165323, 0, 1, 0, -0.165323, 0, 0.986239, -3.63741, -4.3535, -6.88928)
+
+[node name="wheelchair3" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.166363, 0.672566, 0.721095, -0.908904, 0.388175, -0.152359, -0.382383, -0.630059, 0.675876, -3.00398, -1.22455, -5.9547)
+
+[node name="ladder-broken5" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.483078, 0.0560977, 0.873778, 0.3951, -0.8766, 0.274715, 0.781365, 0.477939, 0.401302, -5.1667, -1.22455, -8.90726)
+
+[node name="poles2" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.625719, 0, 0.780048, 0, 1, 0, -0.780048, 0, 0.625719, 3.33548, 0, 0.93966)
+
+[node name="poles3" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.625719, 0, 0.780048, 0.553854, 0.704176, -0.444277, -0.549291, 0.710026, 0.440616, 1.71123, -1.81383, -2.84712)
+
+[node name="vehicle-convertible4" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.0253446, 0.929733, -0.367361, -0.796936, -0.240647, -0.55406, -0.603532, 0.27872, 0.747037, 6.27715, 4.32912, 3.10703)
+
+[node name="fence-broken4" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.482843, -0.422614, -0.766982, 0.40379, 0.884621, -0.233235, 0.777057, -0.197084, 0.59778, -6.46743, 4.4262, 20.7167)
+
+[node name="ladder-broken6" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.749268, 0.658837, 0.0673172, 0, -0.101647, 0.994821, 0.662267, -0.745387, -0.0761606, 5.35914, 2.65168, 6.43062)
+
+[node name="platform-ramp12" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.811794, 0.0147109, 0.583759, 0.562859, -0.246494, 0.788943, 0.155499, 0.969032, 0.191823, 6.67536, 3.72426, 9.02831)
+
+[node name="platform-ramp13" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.672806, -0.538823, -0.506954, -0.307903, -0.419135, 0.85412, -0.672702, 0.73075, 0.116092, 6.34738, 1.21244, 2.50065)
+
+[node name="ladder-long4" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.867107, 0.252103, 0.429615, -0.346714, 0.924712, 0.157152, -0.357652, -0.285221, 0.889232, 5.93492, 2.65168, 0.305093)
+
+[node name="vehicle3" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.511349, 0.624352, -0.590514, -0.850345, -0.26826, 0.452715, 0.124243, 0.733636, 0.668089, 6.23749, 2.94689, -2.35009)
+
+[node name="wall3" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.749268, 0, -0.662267, 0, 1, 0, 0.662267, 0, 0.749268, 5.23157, -0.477267, -1.60173)
+
+[node name="wheelchair4" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.749268, 0, -0.662267, 0, 1, 0, 0.662267, 0, 0.749268, 3.79163, 2.65168, -4.41659)
+
+[node name="ladder-broken7" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.911223, -0.336059, 0.238195, 0.3951, -0.8766, 0.274715, 0.116482, 0.344437, 0.931555, 5.83694, 2.65168, -4.06028)
+
+[node name="vehicle-convertible5" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.593979, 0.804405, -0.0110036, -0.803262, 0.593777, 0.0468976, 0.0442581, -0.0190174, 0.99884, 5.5981, 3.35922, 0.630898)
+
+[node name="fence-broken5" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.604664, -0.449381, -0.657601, 0.40379, 0.884621, -0.233235, 0.68654, -0.124504, 0.716354, -2.5953, 3.20165, 21.3997)
+
+[node name="ladder-broken8" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.848446, 0, -0.529283, 0, 1, 0, 0.529283, 0, 0.848446, 6.70672, 1.42713, 5.35501)
+
+[node name="platform-ramp14" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.725268, -0.605108, 0.328374, 0.562859, -0.246494, 0.788943, -0.396454, 0.757023, 0.519366, 8.43429, 2.49971, 7.69935)
+
+[node name="platform-ramp15" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.774761, -0.410599, -0.480785, -0.307903, -0.419135, 0.85412, -0.552215, 0.809774, 0.198305, 7.03165, -0.0121112, 1.31574)
+
+[node name="ladder-long5" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.100869, -0.203332, 0.9739, -0.346714, 0.924712, 0.157152, -0.932531, -0.321813, -0.163772, 6.26189, 1.42713, -0.781418)
+
+[node name="vehicle4" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.517519, -0.700199, -0.491828, 0.837114, -0.295243, -0.460513, 0.177242, -0.650041, 0.73894, 6.02968, 1.72234, -2.84548)
+
+[node name="wall4" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.848446, 0, -0.529283, 0, 1, 0, 0.529283, 0, 0.848446, 5.25297, -1.70182, -2.54572)
+
+[node name="wheelchair5" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.37789, 0.9212, 0.0926828, -0.908904, 0.388175, -0.152359, -0.176331, -0.0266647, 0.98397, 5.10864, 1.42713, -1.42597)
+
+[node name="ladder-broken9" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.879427, -0.274491, 0.388925, 0.3951, -0.8766, 0.274715, 0.265525, 0.395256, 0.879357, 5.44356, 1.42713, -5.07053)
+
+[node name="poles4" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.985432, 0, 0.170072, 0, 1, 0, -0.170072, 0, 0.985432, 5.29269, 2.65168, 7.93817)
+
+[node name="poles5" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.832609, -0.470227, 0.292659, 0.553854, 0.704176, -0.444277, 0.00282705, 0.531999, 0.84674, 6.58355, 0.837848, 4.02517)
+
+[node name="vehicle-convertible6" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.164428, 0.796166, -0.582308, -0.796936, -0.240647, -0.55406, -0.581255, 0.555165, 0.594925, 6.55914, 4.45148, 14.2303)
+
+[node name="fence-broken6" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.215985, -0.339916, -0.915319, 0.40379, 0.884621, -0.233235, 0.888991, -0.319221, 0.328319, -11.048, 4.54856, 26.9784)
+
+[node name="ladder-broken10" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.504934, 0.858687, 0.0877371, 0, -0.101647, 0.994821, 0.863158, -0.502319, -0.0513249, 4.64898, 2.77404, 17.1009)
+
+[node name="platform-ramp16" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.819749, -0.288688, 0.494642, 0.562859, -0.246494, 0.788943, -0.105832, 0.925148, 0.364554, 5.088, 3.84662, 19.9797)
+
+[node name="platform-ramp17" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.429039, -0.740105, -0.517851, -0.307903, -0.419135, 0.85412, -0.849189, 0.525899, -0.0480554, 6.81524, 1.3348, 13.6762)
+
+[node name="ladder-long6" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.935435, 0.328576, 0.130385, -0.346714, 0.924712, 0.157152, -0.0689317, -0.192212, 0.97893, 7.10917, 2.77404, 11.4616)
+
+[node name="vehicle5" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.524572, 0.363977, -0.769639, -0.850345, -0.26826, 0.452715, -0.0416852, 0.89194, 0.450227, 8.22591, 3.06925, 9.0338)
+
+[node name="wall5" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.504934, 0, -0.863158, 0, 1, 0, 0.863158, 0, 0.504934, 7.03657, -0.354907, 9.43054)
+
+[node name="wheelchair6" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.504934, 0, -0.863158, 0, 1, 0, 0.863158, 0, 0.504934, 6.54785, 2.77404, 6.30675)
+
+[node name="ladder-broken11" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.902018, -0.426826, -0.0646785, 0.3951, -0.8766, 0.274715, -0.173952, 0.222243, 0.959348, 8.37955, 2.77404, 7.28406)
+
+[node name="vehicle-convertible7" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.550441, 0.770102, -0.322426, -0.803262, 0.593777, 0.0468976, 0.227565, 0.233178, 0.945433, 6.68743, 3.48158, 11.6659)
+
+[node name="fence-broken7" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.359983, -0.388013, -0.848445, 0.40379, 0.884622, -0.233235, 0.841051, -0.258633, 0.475125, -7.58288, 3.32401, 28.8366)
+
+[node name="ladder-broken12" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.640686, 0, -0.767803, 0, 1, 0, 0.767803, 0, 0.640686, 6.26509, 1.54949, 16.5)
+
+[node name="platform-ramp18" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.565158, -0.811281, 0.14973, 0.562859, -0.246494, 0.788943, -0.603146, 0.530154, 0.595946, 7.17401, 2.62207, 19.2666)
+
+[node name="platform-ramp19" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.563526, -0.642978, -0.51867, -0.307903, -0.419135, 0.85412, -0.766573, 0.641019, 0.0382187, 7.83537, 0.110249, 12.7643)
+
+[node name="ladder-long7" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.19544, -0.092646, 0.97633, -0.346714, 0.924712, 0.157152, -0.917384, -0.369221, 0.148604, 7.75914, 1.54949, 10.5316)
+
+[node name="vehicle6" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.546988, -0.462139, -0.69802, 0.837114, -0.295243, -0.460513, 0.00673583, -0.836217, 0.548357, 8.18322, 1.8447, 8.49828)
+
+[node name="wall6" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.640686, 0, -0.767803, 0, 1, 0, 0.767803, 0, 0.640686, 7.35174, -1.57946, 8.54046)
+
+[node name="wheelchair7" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.414059, 0.883442, -0.219282, -0.908904, 0.388175, -0.152359, -0.0494809, 0.262392, 0.963692, 6.8649, 1.54949, 9.5591)
+
+[node name="ladder-broken13" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.918364, -0.384211, 0.0948139, 0.3951, -0.8766, 0.274715, -0.0224345, 0.289749, 0.95684, 8.32139, 1.54949, 6.20149)
+
+[node name="poles6" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.989252, 0, -0.146221, 0, 1, 0, 0.146221, 0, 0.989252, 4.11499, 2.77404, 18.5123)
+
+[node name="poles7" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.790072, -0.612864, 0.0135518, 0.553854, 0.704176, -0.444277, 0.262738, 0.358516, 0.895787, 6.56344, 0.960208, 15.1982)
+
+[node name="vehicle-convertible8" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.508146, 0.228875, -0.830304, -0.796936, -0.240647, -0.55406, -0.326621, 0.943242, 0.0601145, 3.72956, 7.10316, 22.1458)
+
+[node name="fence-broken8" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.426919, -0.0432784, -0.903254, 0.40379, 0.884621, -0.233235, 0.809132, -0.464297, -0.360186, -17.9055, 7.20024, 20.0369)
+
+[node name="ladder-broken14" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.19331, 0.976056, 0.0997294, 0, -0.101647, 0.994821, 0.981138, 0.192308, 0.0196493, 0.397242, 5.42572, 23.0316)
+
+[node name="platform-ramp20" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.544123, -0.829, 0.129187, 0.562859, -0.246494, 0.788943, -0.622189, 0.501996, 0.600734, -1.18037, 6.4983, 25.4793)
+
+[node name="platform-ramp21" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.240925, -0.902822, -0.356184, -0.307903, -0.419135, 0.85412, -0.920408, -0.0961083, -0.378962, 4.28842, 3.98648, 21.9002)
+
+[node name="ladder-long8" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.746542, 0.373487, -0.55062, -0.346714, 0.924712, 0.157152, 0.567859, 0.0735866, 0.81983, 5.97527, 5.42572, 20.4356)
+
+[node name="vehicle7" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.365439, -0.317986, -0.874837, -0.850345, -0.26826, 0.452715, -0.37864, 0.909352, -0.172366, 8.41989, 5.72093, 19.356)
+
+[node name="wall7" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.19331, 0, -0.981138, 0, 1, 0, 0.981138, 0, -0.19331, 7.26601, 2.29677, 18.8656)
+
+[node name="wheelchair8" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.19331, 0, -0.981138, 0, 1, 0, 0.981138, 0, -0.19331, 8.96861, 5.42572, 16.2014)
+
+[node name="ladder-broken15" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.56065, -0.466991, -0.683806, 0.3951, -0.8766, 0.274715, -0.727714, -0.116153, 0.675974, 9.69381, 5.42572, 18.1468)
+
+[node name="vehicle-convertible9" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.261719, 0.422587, -0.867712, -0.803262, 0.593776, 0.0468976, 0.535045, 0.684726, 0.494851, 5.52397, 6.13326, 20.3093)
+
+[node name="fence-broken9" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.287276, -0.119442, -0.950372, 0.40379, 0.884621, -0.233235, 0.868578, -0.450753, -0.205901, -16.5399, 5.97569, 23.724)
+
+[node name="ladder-broken16" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.028445, 0, -0.999595, 0, 1, 0, 0.999595, 0, -0.028445, 2.0061, 4.20117, 23.6516)
+
+[node name="platform-ramp22" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.0240109, -0.95897, -0.282487, 0.562859, -0.246494, 0.788943, -0.826204, -0.140057, 0.545684, 0.854876, 5.27375, 26.3265)
+
+[node name="platform-ramp23" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.0854447, -0.906288, -0.413934, -0.307903, -0.419135, 0.85412, -0.947573, 0.0544716, -0.314862, 5.6567, 2.76193, 21.8925)
+
+[node name="ladder-long9" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.75399, 0.175106, 0.633117, -0.346714, 0.924712, 0.157152, -0.557933, -0.338002, 0.757935, 7.0782, 4.20117, 20.1692)
+
+[node name="vehicle8" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.414301, 0.207533, -0.886163, 0.837114, -0.295243, -0.460513, -0.357205, -0.93261, -0.0514093, 8.74256, 4.49638, 18.9265)
+
+[node name="wall8" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.028445, 0, -0.999595, 0, 1, 0, 0.999595, 0, -0.028445, 8.09163, 1.07222, 18.4075)
+
+[node name="wheelchair9" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.343011, 0.488161, -0.802522, -0.908904, 0.388175, -0.152359, 0.237143, 0.781677, 0.57684, 7.05224, 4.20117, 18.8483)
+
+[node name="ladder-broken17" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.673243, -0.479768, -0.562643, 0.3951, -0.8766, 0.274715, -0.625012, -0.0373508, 0.779721, 10.3672, 4.20117, 17.2971)
+
+[node name="poles8" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.644377, 0, -0.764708, 0, 1, 0, 0.764708, 0, 0.644377, -0.937563, 5.42572, 23.7354)
+
+[node name="poles9" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.417973, -0.696633, -0.583096, 0.553854, 0.704176, -0.444277, 0.7201, -0.137255, 0.680159, 3.09177, 3.61189, 22.8738)
+
+[node name="vehicle-convertible10" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.743217, -0.334719, -0.579304, -0.627285, -0.649744, -0.429355, -0.232686, 0.682492, -0.692865, -13.7524, 4.78797, 37.073)
+
+[node name="fence-broken10" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.890961, 0.0728533, -0.448198, 0.0574288, 0.997199, 0.0479303, 0.450435, 0.0169642, -0.892649, -29.4395, 8.19039, 22.4145)
+
+[node name="ladder-broken18" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.733283, 0.668622, -0.123454, -0.404159, -0.282621, 0.869932, 0.546765, 0.687801, 0.477471, -16.564, 3.27361, 34.9506)
+
+[node name="platform-ramp24" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.163771, -0.899127, -0.405894, 0.833563, -0.346173, 0.430506, -0.527589, -0.267834, 0.806173, -19.4546, 3.34589, 36.0775)
+
+[node name="platform-ramp25" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.79323, -0.569072, -0.216665, 0.0972185, -0.232896, 0.96763, -0.601111, -0.788617, -0.129416, -12.5751, 2.04569, 35.9867)
+
+[node name="ladder-long10" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.313072, 0.0720129, -0.946995, -0.63919, 0.753468, -0.154017, 0.70244, 0.653529, 0.28192, -10.6615, 3.78075, 36.611)
+
+[node name="vehicle9" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.10108, -0.737018, -0.668272, -0.555535, -0.599049, 0.576646, -0.825326, 0.312961, -0.469992, -8.1655, 4.24173, 37.4977)
+
+[node name="wall9" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.733282, -0.190778, -0.652611, -0.404159, 0.894153, 0.192731, 0.546765, 0.405085, -0.732771, -8.12369, 1.52078, 35.0705)
+
+[node name="wheelchair10" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.733282, -0.190778, -0.652611, -0.404159, 0.894153, 0.192731, 0.546765, 0.405085, -0.732771, -5.80844, 5.28533, 35.5755)
+
+[node name="ladder-broken19" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.0820846, -0.129062, -0.988233, 0.731171, -0.681608, 0.0282848, -0.677238, -0.720246, 0.150316, -6.39546, 4.36098, 37.3394)
+
+[node name="vehicle-convertible11" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.0404823, -0.189039, -0.981135, -0.97938, 0.187005, -0.0764407, 0.197928, 0.963998, -0.177571, -11.0745, 4.51823, 36.5353)
+
+[node name="fence-broken11" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.817022, 0.00525402, -0.576584, 0.0161459, 0.999775, -0.0137689, 0.576382, -0.0205591, -0.816923, -30.3254, 5.34446, 25.2562)
+
+[node name="ladder-broken20" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.6153, -0.190778, -0.764859, -0.430461, 0.894154, 0.123262, 0.660386, 0.405085, -0.632295, -15.44, 1.73116, 35.8617)
+
+[node name="platform-ramp26" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.364024, -0.619844, -0.695184, 0.864348, -0.0532327, 0.500069, -0.346972, -0.782918, 0.516383, -18.132, 1.65761, 37.404)
+
+[node name="platform-ramp27" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.687754, -0.66112, -0.299858, 0.126256, -0.297832, 0.946232, -0.714881, -0.688634, -0.121365, -11.2668, 0.802246, 36.3246)
+
+[node name="ladder-long11" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.986823, 0.161062, 0.0154697, -0.151657, 0.954026, -0.258524, -0.056397, 0.252771, 0.965881, -9.40726, 2.67898, 36.6107)
+
+[node name="vehicle10" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.271779, 0.77194, -0.574668, 0.949435, 0.117537, -0.291133, -0.157192, -0.624734, -0.764851, -7.42471, 3.29731, 36.9083)
+
+[node name="wall10" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.6153, -0.190778, -0.764859, -0.430461, 0.894154, 0.123262, 0.660386, 0.405085, -0.632295, -6.97256, 0.532984, 34.7701)
+
+[node name="wheelchair11" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.300955, -0.156053, -0.940784, -0.953634, -0.0461676, -0.297407, 0.00297746, 0.986669, -0.162712, -8.64389, 3.25486, 35.6991)
+
+[node name="ladder-broken21" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.231071, -0.185808, -0.95503, 0.699114, -0.714374, -0.0301652, -0.676643, -0.674645, 0.294972, -5.13113, 3.55989, 36.6801)
+
+[node name="poles10" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.050239, -0.190778, -0.980347, -0.40323, 0.894154, -0.194668, 0.913719, 0.405085, -0.032006, -18.0255, 3.1164, 34.6093)
+
+[node name="poles11" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.206019, -0.597711, -0.774789, 0.136475, 0.766485, -0.627595, 0.968984, -0.235036, -0.0763374, -14.0171, 1.42118, 35.7613)
+
+[node name="vehicle-convertible12" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.564494, -0.817743, -0.112443, -0.818659, -0.537217, -0.202965, 0.105567, 0.206625, -0.972709, -22.4229, 6.21611, 36.3832)
+
+[node name="fence-broken12" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.93821, 0.269748, 0.216793, 0.315668, 0.923806, 0.216645, -0.141835, 0.271693, -0.951875, -24.5883, 14.8477, 16.5504)
+
+[node name="ladder-broken22" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.981628, 0.0227259, -0.189449, -0.175184, -0.500822, 0.847637, -0.0756168, 0.865252, 0.495602, -23.5987, 5.72781, 32.7663)
+
+[node name="platform-ramp28" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.386413, -0.596162, -0.703758, 0.861345, -0.0395862, 0.506474, -0.3298, -0.801887, 0.498205, -26.4638, 6.65555, 32.017)
+
+[node name="platform-ramp29" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.99111, -0.00182417, 0.13303, -0.133042, -0.0161629, 0.990979, 0.000342458, -0.999868, -0.0162624, -21.4841, 3.28407, 35.6034)
+
+[node name="ladder-long12" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.336281, -0.175139, -0.925333, -0.729395, 0.669974, 0.138268, 0.595733, 0.72143, -0.353045, -20.0233, 4.31452, 37.5698)
+
+[node name="vehicle11" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.456108, -0.885427, -0.0893562, -0.529727, -0.350808, 0.772219, -0.715091, -0.304881, -0.629041, -18.5687, 3.94446, 39.8004)
+
+[node name="wall11" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.981627, -0.190777, -0.00335139, -0.175184, 0.894153, 0.412068, -0.0756167, 0.405085, -0.911147, -17.6662, 1.43353, 37.315)
+
+[node name="wheelchair12" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.981627, -0.190777, -0.00335139, -0.175184, 0.894153, 0.412068, -0.0756167, 0.405085, -0.911147, -15.3703, 4.27074, 39.8578)
+
+[node name="ladder-broken23" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.51679, 0.188878, -0.835017, 0.744009, -0.58161, 0.328908, -0.42353, -0.791236, -0.441098, -17.1026, 3.51278, 40.715)
+
+[node name="vehicle-convertible13" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.311194, -0.690724, -0.652732, -0.949772, 0.202154, 0.238888, -0.033053, 0.694286, -0.71894, -20.124, 5.14609, 37.4335)
+
+[node name="fence-broken13" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.968466, 0.24201, 0.0592029, 0.248987, 0.948613, 0.195291, -0.00889856, 0.203873, -0.978957, -27.6398, 12.3194, 17.671)
+
+[node name="ladder-broken24" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.967566, -0.190778, -0.165591, -0.240898, 0.894153, 0.377436, 0.0760572, 0.405085, -0.91111, -23.6513, 3.88093, 33.7953)
+
+[node name="platform-ramp30" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.683175, -0.00330049, -0.730247, 0.719997, 0.170059, 0.672818, 0.121964, -0.985428, 0.118556, -26.6527, 4.59359, 33.4565)
+
+[node name="platform-ramp31" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.987241, -0.147421, 0.0601881, -0.0686147, -0.0527555, 0.996247, -0.143692, -0.987666, -0.0621981, -20.9789, 1.68421, 36.3498)
+
+[node name="ladder-long13" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.74869, 0.182704, -0.637246, -0.448976, 0.846989, -0.284656, 0.487733, 0.499227, 0.716162, -19.3204, 2.87803, 38.0487)
+
+[node name="vehicle12" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.104115, 0.993993, -0.0337352, 0.991828, -0.106284, -0.0705759, -0.0737376, -0.0261118, -0.996936, -17.8594, 2.83804, 39.5538)
+
+[node name="wall12" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.967566, -0.190778, -0.165591, -0.240898, 0.894153, 0.377436, 0.0760572, 0.405085, -0.91111, -16.8323, 0.148002, 37.5224)
+
+[node name="wheelchair13" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.0113737, -0.732153, -0.681045, -0.999412, -0.0303622, 0.0159503, -0.0323562, 0.680463, -0.732068, -18.0541, 3.2199, 37.8904)
+
+[node name="ladder-broken25" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.396208, 0.110567, -0.911479, 0.759884, -0.596699, 0.257929, -0.51536, -0.794812, -0.320435, -15.9212, 2.38212, 40.7442)
+
+[node name="poles12" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.611609, -0.190778, -0.767814, -0.431049, 0.894153, 0.121187, 0.663424, 0.405085, -0.629107, -24.5338, 6.04522, 31.6253)
+
+[node name="poles13" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.718046, -0.136721, -0.682436, 0.159269, 0.92222, -0.35234, 0.677528, -0.361687, -0.640421, -22.5807, 3.1475, 34.4637)
+
+[node name="vehicle-convertible14" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.410799, -0.900211, 0.144444, -0.891064, -0.429955, -0.145409, 0.193004, -0.0689752, -0.978771, -29.9122, 8.35535, 28.4361)
+
+[node name="fence-broken14" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.815577, 0.288815, 0.501418, 0.445094, 0.866843, 0.224664, -0.369765, 0.406409, -0.835527, -25.3392, 18.0152, 9.50707)
+
+[node name="ladder-broken26" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.933565, -0.282449, -0.22063, -0.0377165, -0.534746, 0.84417, -0.356417, 0.79641, 0.488568, -30.0648, 8.18073, 24.6087)
+
+[node name="platform-ramp32" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.562794, -0.345047, -0.751137, 0.814194, 0.0745772, 0.575783, -0.142654, -0.935618, 0.322906, -32.4701, 9.51718, 23.1737)
+
+[node name="platform-ramp33" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.927538, 0.279461, 0.248146, -0.265578, 0.0257059, 0.963747, 0.262951, -0.959813, 0.0980616, -29.1438, 5.35826, 27.7197)
+
+[node name="ladder-long14" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.574807, -0.291914, -0.76445, -0.701365, 0.656993, 0.276492, 0.421526, 0.695088, -0.582382, -28.1886, 6.09956, 30.0862)
+
+[node name="vehicle13" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.574091, -0.79781, 0.184172, -0.556362, -0.215065, 0.802626, -0.600734, -0.563246, -0.567338, -27.4794, 5.44426, 32.5954)
+
+[node name="wall13" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.933566, -0.190778, 0.303413, -0.0377166, 0.894153, 0.44617, -0.356417, 0.405085, -0.841946, -26.2129, 2.93969, 30.2673)
+
+[node name="wheelchair14" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.933566, -0.190778, 0.303413, -0.0377166, 0.894153, 0.44617, -0.356417, 0.405085, -0.841946, -24.4129, 5.33292, 33.5566)
+
+[node name="ladder-broken27" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.699581, 0.335182, -0.631063, 0.684313, -0.568476, 0.456673, -0.205676, -0.751324, -0.627064, -26.3938, 4.78097, 33.842)
+
+[node name="vehicle-convertible15" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.398895, -0.830156, -0.389518, -0.896846, 0.264624, 0.354459, -0.19118, 0.490729, -0.85008, -28.1477, 6.94203, 29.9925)
+
+[node name="fence-broken15" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.889883, 0.284544, 0.356574, 0.377656, 0.89796, 0.22593, -0.255903, 0.335713, -0.906538, -28.8592, 15.8779, 9.54395)
+
+[node name="ladder-broken28" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.97088, -0.190778, 0.144898, -0.11096, 0.894153, 0.433795, -0.212319, 0.405085, -0.889285, -30.6241, 6.31681, 25.4367)
+
+[node name="platform-ramp34" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.700659, 0.295939, -0.649228, 0.615451, 0.20966, 0.759778, 0.360965, -0.931913, -0.035236, -33.3008, 7.44173, 24.3408)
+
+[node name="platform-ramp35" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.972238, 0.13311, 0.192443, -0.195301, 0.00863821, 0.980705, 0.12888, -0.991063, 0.0343949, -29.063, 3.67528, 28.4496)
+
+[node name="ladder-long15" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.521527, 0.132479, -0.842888, -0.565812, 0.793118, -0.225434, 0.638644, 0.594486, 0.488591, -27.8247, 4.56269, 30.627)
+
+[node name="vehicle14" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.236998, 0.940928, 0.241838, 0.970876, -0.23838, -0.0239729, 0.0350923, 0.240476, -0.97002, -26.865, 4.26337, 32.4684)
+
+[node name="wall14" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.97088, -0.190778, 0.144898, -0.11096, 0.894153, 0.433795, -0.212319, 0.405085, -0.889285, -25.6296, 1.54582, 30.5958)
+
+[node name="wheelchair15" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.097932, -0.893108, -0.439053, -0.989582, 0.0406079, 0.138125, -0.105532, 0.448006, -0.887781, -26.5343, 4.73667, 30.8507)
+
+[node name="ladder-broken29" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.612685, 0.259878, -0.746379, 0.720122, -0.572689, 0.39173, -0.325641, -0.77749, -0.538021, -25.4111, 3.5009, 34.1074)
+
+[node name="poles14" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.820827, -0.190778, -0.538375, -0.371634, 0.894154, 0.249756, 0.433742, 0.405085, -0.804844, -30.5944, 8.66856, 23.2826)
+
+[node name="poles15" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.856475, 0.0810898, -0.509779, 0.226554, 0.946433, -0.230083, 0.463815, -0.312552, -0.828967, -29.8809, 5.41843, 26.315)
+
+[node name="vehicle-convertible16" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.00742094, -0.737489, 0.675318, -0.980905, -0.125885, -0.148254, 0.194348, -0.663522, -0.722473, -33.5089, 13.3955, 22.1629)
+
+[node name="fence-broken16" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.29203, 0.165974, 0.941898, 0.689538, 0.718994, 0.0870911, -0.662764, 0.674907, -0.324414, -16.2865, 21.8199, 11.9183)
+
+[node name="ladder-broken30" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.49855, -0.821835, -0.275743, 0.267224, -0.448306, 0.853003, -0.824645, 0.35158, 0.443117, -31.3234, 13.4131, 19.0124)
+
+[node name="platform-ramp36" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.697662, 0.327309, -0.637288, 0.603279, 0.211394, 0.769004, 0.386421, -0.920967, -0.0499768, -31.9687, 15.4816, 16.7906)
+
+[node name="platform-ramp37" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.482744, 0.804707, 0.345551, -0.550076, -0.0284103, 0.834632, 0.681451, -0.592992, 0.428935, -33.1638, 10.3355, 21.3859)
+
+[node name="ladder-long16" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.851872, -0.498309, -0.161251, -0.502293, 0.690069, 0.521063, -0.148376, 0.524874, -0.838148, -33.7195, 10.6584, 23.9645)
+
+[node name="vehicle15" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.677301, -0.309101, 0.667622, -0.685619, 0.0639122, 0.72515, -0.266814, -0.948879, -0.168638, -34.8639, 9.72629, 26.2118)
+
+[node name="wall15" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.498551, -0.190778, 0.845607, 0.267223, 0.894153, 0.359279, -0.824645, 0.405085, -0.3948, -33.0445, 7.0364, 24.5531)
+
+[node name="wheelchair16" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.498551, -0.190778, 0.845607, 0.267223, 0.894153, 0.359279, -0.824645, 0.405085, -0.3948, -33.1512, 8.63256, 28.7038)
+
+[node name="ladder-broken31" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.810652, 0.585475, 0.00786561, 0.439619, -0.617463, 0.652285, 0.386753, -0.525318, -0.757933, -34.9526, 8.7144, 27.6748)
+
+[node name="vehicle-convertible17" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.387846, -0.870014, 0.304386, -0.720896, 0.492103, 0.488, -0.574356, -0.0301618, -0.81805, -33.4412, 11.4491, 24.0969)
+
+[node name="fence-broken17" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.433222, 0.212985, 0.875761, 0.644557, 0.752386, 0.13587, -0.629972, 0.623339, -0.463232, -19.4606, 20.8837, 9.46708)
+
+[node name="ladder-broken32" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.631488, -0.190778, 0.751549, 0.204149, 0.894154, 0.398513, -0.748028, 0.405085, -0.5257, -32.6742, 11.7875, 18.9416)
+
+[node name="platform-ramp38" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.449415, 0.841624, -0.299489, 0.353751, 0.14018, 0.924776, 0.820296, -0.521553, -0.234727, -33.7803, 13.7273, 16.7866)
+
+[node name="platform-ramp39" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.614482, 0.708978, 0.346066, -0.492473, 0.00201172, 0.870326, 0.616346, -0.705227, 0.350388, -33.9285, 8.68612, 21.6436)
+
+[node name="ladder-long17" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.12263, -0.0842333, -0.988871, -0.722278, 0.69092, 0.0307159, 0.680644, 0.718007, -0.145567, -34.1208, 9.06636, 24.2667)
+
+[node name="vehicle16" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.377213, 0.512777, 0.771214, 0.847108, -0.527612, -0.0635271, 0.374326, 0.677264, -0.633399, -34.5866, 8.41817, 26.2069)
+
+[node name="wall16" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.631488, -0.190778, 0.751549, 0.204149, 0.894154, 0.398513, -0.748028, 0.405085, -0.5257, -33.1173, 5.51948, 24.8443)
+
+[node name="wheelchair17" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.232887, -0.942146, 0.24109, -0.905626, 0.300447, 0.299289, -0.354409, -0.148637, -0.923202, -33.2397, 8.82228, 25.2204)
+
+[node name="ladder-broken33" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.826191, 0.543417, -0.148688, 0.504919, -0.597111, 0.62331, 0.249934, -0.590048, -0.767708, -34.6582, 7.18356, 28.1696)
+
+[node name="poles16" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.971567, -0.190778, 0.140219, -0.113048, 0.894153, 0.433255, -0.208033, 0.405085, -0.890297, -30.804, 14.0883, 17.7668)
+
+[node name="poles17" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.8821, 0.466062, 0.068453, 0.465089, 0.884739, -0.0305002, -0.0747782, 0.00493272, -0.997188, -32.8503, 10.6719, 19.8665)
+
+[node name="vehicle-convertible18" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.549344, 0.092743, -0.830434, -0.718601, -0.454729, -0.526149, -0.42642, 0.885787, -0.183158, -10.4993, 7.0422, 27.4726)
+
+[node name="fence-broken18" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.537392, 0.0230286, -0.843019, 0.224225, 0.967548, -0.116504, 0.812979, -0.251634, -0.525116, -31.6164, 8.31325, 22.4739)
+
+[node name="ladder-broken34" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.330547, 0.938901, 0.0959331, -0.215323, -0.173989, 0.960918, 0.918899, 0.296972, 0.259678, -13.9236, 5.31681, 27.4834)
+
+[node name="platform-ramp40" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.45035, -0.891832, 0.0426547, 0.706141, -0.326531, 0.628285, -0.546397, 0.313069, 0.776814, -15.8325, 5.85936, 29.8693)
+
+[node name="platform-ramp41" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.369065, -0.880056, -0.298818, -0.0997164, -0.357155, 0.928707, -0.924039, -0.312956, -0.21957, -9.91127, 4.04509, 26.6021)
+
+[node name="ladder-long18" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.65843, 0.359269, -0.661359, -0.489978, 0.871617, -0.0143203, 0.571307, 0.33348, 0.749933, -8.03369, 5.72254, 25.7519)
+
+[node name="vehicle17" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.308025, -0.443779, -0.841535, -0.730578, -0.45626, 0.508018, -0.609406, 0.771289, -0.183676, -5.46065, 6.17465, 25.1165)
+
+[node name="wall17" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.330547, 0, -0.943789, -0.215323, 0.973627, 0.0754134, 0.918899, 0.228147, -0.32183, -6.53328, 2.98889, 23.7032)
+
+[node name="wheelchair18" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.330547, 0, -0.943789, -0.215323, 0.973627, 0.0754134, 0.918899, 0.228147, -0.32183, -4.46994, 6.5819, 22.0846)
+
+[node name="ladder-broken35" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.451739, -0.445789, -0.772789, 0.567173, -0.812134, 0.136941, -0.688655, -0.376444, 0.619713, -4.02806, 6.11909, 24.0596)
+
+[node name="vehicle-convertible19" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.183166, 0.321171, -0.92914, -0.911383, 0.409801, -0.0380108, 0.368554, 0.853763, 0.367771, -8.46252, 6.45454, 25.7293)
+
+[node name="fence-broken19" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.407595, -0.054286, -0.911549, 0.20628, 0.966955, -0.149823, 0.88956, -0.249101, -0.382928, -30.7877, 6.24409, 25.9367)
+
+[node name="ladder-broken36" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.169969, 0, -0.985449, -0.224827, 0.973627, 0.0387779, 0.95946, 0.228147, -0.165486, -12.419, 3.93245, 28.0238)
+
+[node name="platform-ramp42" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.0934445, -0.929401, -0.357045, 0.735381, -0.177324, 0.654042, -0.67118, -0.323681, 0.666895, -13.938, 4.4099, 30.6875)
+
+[node name="platform-ramp43" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.219012, -0.904849, -0.365078, -0.088549, -0.391049, 0.9161, -0.971696, -0.168309, -0.165768, -8.55574, 2.81028, 26.5043)
+
+[node name="ladder-long19" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.825517, 0.221287, 0.519186, -0.235971, 0.970991, -0.0386561, -0.512679, -0.0906018, 0.853787, -6.90413, 4.55475, 25.3681)
+
+[node name="vehicle18" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.359435, 0.337743, -0.869906, 0.909117, -0.0835536, -0.408076, -0.210508, -0.937523, -0.277015, -5.08031, 5.06895, 24.4677)
+
+[node name="wall18" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.169969, 0, -0.985449, -0.224827, 0.973627, 0.0387779, 0.95946, 0.228147, -0.165486, -5.65101, 1.87339, 23.0963)
+
+[node name="wheelchair19" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.305898, 0.372328, -0.876241, -0.949592, 0.185604, -0.252639, 0.0685692, 0.909353, 0.410336, -6.74243, 4.8539, 24.0915)
+
+[node name="ladder-broken37" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.577764, -0.469617, -0.66757, 0.547623, -0.829517, 0.109589, -0.605225, -0.302261, 0.736438, -3.24096, 5.09692, 23.0544)
+
+[node name="poles18" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.529372, 0, -0.84839, -0.193558, 0.973627, -0.120774, 0.826015, 0.228147, 0.51541, -15.3448, 5.20105, 27.9774)
+
+[node name="poles19" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(0.311585, -0.670115, -0.673692, 0.363092, 0.73915, -0.567293, 0.878111, -0.0678518, 0.473621, -11.2339, 3.49922, 27.2897)
+
+[node name="vehicle-convertible20" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.577985, -0.570374, -0.583616, -0.815975, -0.413474, -0.40401, -0.010873, 0.709727, -0.704393, -18.3627, 8.94604, 30.9706)
+
+[node name="fence-broken20" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.892981, 0.325699, -0.310654, 0.347774, 0.937427, -0.0168549, 0.285726, -0.123089, -0.950374, -30.7698, 13.1128, 13.6145)
+
+[node name="ladder-broken38" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.872709, 0.485712, 0.049628, -0.111391, -0.297041, 0.948346, 0.475364, 0.822102, 0.313334, -21.196, 7.76115, 28.6747)
+
+[node name="platform-ramp44" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.121578, -0.919425, -0.374, 0.734539, -0.170083, 0.656905, -0.667586, -0.354582, 0.654676, -24.0827, 8.71793, 29.2929)
+
+[node name="platform-ramp45" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.857283, -0.511568, 0.058006, -0.205643, -0.236952, 0.949508, -0.471992, -0.825925, -0.308336, -17.8136, 5.85071, 30.5192)
+
+[node name="ladder-long20" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.0509283, 0.185857, -0.981256, -0.551249, 0.824531, 0.127562, 0.832785, 0.53442, 0.144446, -15.6051, 7.17523, 31.1752)
+
+[node name="vehicle19" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.0517662, -0.898776, -0.435342, -0.708444, -0.340296, 0.618309, -0.703866, 0.276408, -0.654348, -13.1992, 7.19727, 32.3751)
+
+[node name="wall19" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.872709, 0, -0.48824, -0.111391, 0.973627, 0.199106, 0.475364, 0.228147, -0.849693, -13.573, 4.13645, 30.4287)
+
+[node name="wheelchair20" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.872709, 0, -0.48824, -0.111391, 0.973627, 0.199106, 0.475364, 0.228147, -0.849693, -10.4404, 7.28065, 30.7253)
+
+[node name="ladder-broken39" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.191268, -0.213993, -0.957927, 0.589672, -0.755145, 0.286432, -0.784669, -0.619648, -0.0182497, -11.4527, 6.86712, 32.4901)
+
+[node name="vehicle-convertible21" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.238109, -0.247945, -0.939057, -0.906637, 0.403476, 0.123356, 0.348302, 0.880755, -0.320868, -15.8012, 7.9612, 30.9222)
+
+[node name="fence-broken21" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.847819, 0.266047, -0.458719, 0.314717, 0.948664, -0.031465, 0.426799, -0.171043, -0.888025, -32.6943, 11.1383, 16.6734)
+
+[node name="ladder-broken40" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.779983, 0, -0.625801, -0.142775, 0.973627, 0.177951, 0.609297, 0.228147, -0.759412, -20.6263, 6.19762, 29.9798)
+
+[node name="platform-ramp46" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.613904, -0.514453, -0.598715, 0.674283, -0.0526097, 0.736596, -0.410443, -0.855902, 0.31459, -23.4099, 7.04672, 31.0575)
+
+[node name="platform-ramp47" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.77727, -0.628534, -0.0282362, -0.174603, -0.258602, 0.950073, -0.604455, -0.733532, -0.310748, -16.9215, 4.42175, 31.25)
+
+[node name="ladder-long21" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.913455, 0.370934, -0.167354, -0.386176, 0.919837, -0.0690459, 0.128327, 0.127698, 0.983477, -14.6877, 5.83063, 31.5459)
+
+[node name="vehicle20" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.00378535, 0.844951, -0.534831, 0.939836, -0.185709, -0.28674, -0.341605, -0.501568, -0.794818, -12.6629, 6.0124, 32.0642)
+
+[node name="wall20" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.779983, 0, -0.625801, -0.142775, 0.973627, 0.177951, 0.609297, 0.228147, -0.759412, -12.6891, 2.86839, 30.4728)
+
+[node name="wheelchair21" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.0415083, -0.279334, -0.959296, -0.979599, 0.177572, -0.0940934, 0.196627, 0.943632, -0.266265, -13.6982, 6.03035, 30.6936)
+
+[node name="ladder-broken41" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.0400926, -0.282306, -0.958486, 0.594065, -0.76457, 0.25004, -0.803418, -0.579428, 0.137054, -10.3692, 5.68338, 32.1743)
+
+[node name="poles20" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.16522, 0, -0.986257, -0.225011, 0.973627, 0.0376944, 0.960246, 0.228147, -0.160862, -22.5968, 7.88915, 28.1285)
+
+[node name="poles21" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.277885, -0.346663, -0.895882, 0.360181, 0.826975, -0.43172, 0.890534, -0.442648, -0.104942, -19.3305, 5.55011, 30.1602)
+
+[node name="vehicle-convertible22" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.494231, -0.787129, -0.369004, -0.855158, -0.363866, -0.369198, 0.156339, 0.498025, -0.852954, -28.9539, 9.8433, 27.6778)
+
+[node name="fence-broken22" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.841053, 0.379947, -0.385059, 0.413676, 0.910409, -0.00523546, 0.348572, -0.163693, -0.922878, -26.6344, 14.6904, 8.97287)
+
+[node name="ladder-broken42" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.981544, 0.190247, 0.0194387, -0.0436302, -0.321742, 0.945822, 0.186194, 0.927517, 0.324105, -31.0317, 8.83788, 24.6161)
+
+[node name="platform-ramp48" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.370849, -0.77772, -0.507565, 0.716544, -0.108063, 0.68912, -0.590792, -0.619252, 0.517196, -33.8939, 10.0047, 24.3377)
+
+[node name="platform-ramp49" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.943273, -0.251698, 0.216529, -0.271441, -0.20906, 0.939475, -0.191196, -0.944956, -0.265522, -28.5156, 6.71189, 27.3804)
+
+[node name="ladder-long22" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.244148, 0.0727978, -0.967002, -0.544188, 0.815079, 0.198757, 0.802652, 0.574757, -0.159385, -26.5227, 7.88287, 28.6916)
+
+[node name="vehicle21" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.212738, -0.962116, -0.170518, -0.718109, -0.272293, 0.640449, -0.662617, -0.0137974, -0.748831, -24.6004, 7.74675, 30.5665)
+
+[node name="wall21" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.981544, 0, -0.191237, -0.0436302, 0.973627, 0.223936, 0.186194, 0.228147, -0.955657, -24.5817, 4.69891, 28.5647)
+
+[node name="wheelchair22" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.981544, 0, -0.191237, -0.0436302, 0.973627, 0.223936, 0.186194, 0.228147, -0.955657, -21.472, 7.61499, 29.8348)
+
+[node name="ladder-broken43" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.462334, -0.0686642, -0.884043, 0.565787, -0.744816, 0.353744, -0.682739, -0.663728, -0.305504, -22.9998, 7.29428, 31.2034)
+
+[node name="vehicle-convertible23" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.39672, -0.474626, -0.785713, -0.883438, 0.429881, 0.186385, 0.2493, 0.768071, -0.589846, -26.5761, 8.67797, 28.3997)
+
+[node name="fence-broken23" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.787337, 0.317634, -0.528404, 0.379055, 0.925335, -0.00856393, 0.48623, -0.207036, -0.848951, -28.4455, 12.8922, 12.2049)
+
+[node name="ladder-broken44" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.936421, 0, -0.350878, -0.0800516, 0.973627, 0.213642, 0.341624, 0.228147, -0.911725, -30.9988, 7.25232, 26.0151)
+
+[node name="platform-ramp50" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.756055, -0.232187, -0.61194, 0.62422, -0.0253251, 0.780838, -0.196798, -0.972341, 0.125789, -33.9104, 8.30954, 26.2046)
+
+[node name="platform-ramp51" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.909756, -0.392452, 0.135375, -0.236253, -0.221292, 0.946158, -0.341364, -0.892755, -0.29404, -27.9921, 5.2312, 28.3319)
+
+[node name="ladder-long23" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.801215, 0.379091, -0.462974, -0.448835, 0.892429, -0.0460116, 0.395729, 0.244664, 0.885177, -25.8598, 6.48053, 29.3088)
+
+[node name="vehicle22" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.174448, 0.941972, -0.286805, 0.933323, -0.251009, -0.256715, -0.313809, -0.222898, -0.922952, -24.0809, 6.5233, 30.4202)
+
+[node name="wall22" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.936421, 0, -0.350878, -0.0800516, 0.973627, 0.213642, 0.341624, 0.228147, -0.911725, -23.8459, 3.37166, 28.8614)
+
+[node name="wheelchair23" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.0901666, -0.539662, -0.837039, -0.977821, 0.2075, -0.0284495, 0.189039, 0.815909, -0.546403, -24.6463, 6.59974, 28.8001)
+
+[node name="ladder-broken45" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.324736, -0.146462, -0.934396, 0.580733, -0.748901, 0.319212, -0.746522, -0.646294, -0.15814, -21.9589, 6.03291, 31.219)
+
+[node name="poles22" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.464997, 0, -0.885312, -0.201981, 0.973627, 0.106088, 0.861964, 0.228147, -0.452733, -32.1873, 9.0593, 23.6712)
+
+[node name="poles23" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.509126, -0.135783, -0.849914, 0.388941, 0.844605, -0.367923, 0.767799, -0.517886, -0.377199, -29.8688, 6.51617, 26.5738)
+
+[node name="vehicle-convertible24" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.140295, -0.965875, 0.217719, -0.909965, -0.212449, -0.356131, 0.390233, -0.148154, -0.908719, -35.4891, 13.6313, 23.1353)
+
+[node name="fence-broken24" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.622533, 0.452504, 0.638508, 0.546085, 0.835596, -0.0597558, -0.560575, 0.31148, -0.767292, -26.3474, 18.2253, 3.95569)
+
+[node name="ladder-broken46" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.862089, -0.504131, -0.0515101, 0.115615, -0.29463, 0.948592, -0.493391, 0.811815, 0.312283, -35.2236, 12.7824, 19.4054)
+
+[node name="platform-ramp52" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.767074, -0.199755, -0.609668, 0.618255, -0.0236334, 0.785622, -0.17134, -0.97956, 0.10537, -37.0123, 14.351, 17.4127)
+
+[node name="platform-ramp53" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.789035, 0.389132, 0.475396, -0.42107, -0.220931, 0.87971, 0.447353, -0.894296, -0.0104706, -35.4421, 10.4579, 23.0168)
+
+[node name="ladder-long24" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.782707, -0.192905, -0.591741, -0.455493, 0.825454, 0.333395, 0.424141, 0.530484, -0.733956, -34.6174, 11.3855, 25.3666)
+
+[node name="vehicle23" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.478152, -0.753128, 0.451852, -0.777786, -0.124138, 0.616149, -0.407947, -0.646057, -0.645128, -34.4066, 11.0652, 28.0277)
+
+[node name="wall23" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.862089, 0, 0.506756, 0.115615, 0.973627, 0.196683, -0.493391, 0.228147, -0.839353, -33.5623, 7.94278, 26.344)
+
+[node name="wheelchair24" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.862089, 0, 0.506756, 0.115615, 0.973627, 0.196683, -0.493391, 0.228147, -0.839353, -31.6107, 10.4217, 29.4798)
+
+[node name="ladder-broken47" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.87213, 0.263987, -0.411947, 0.450522, -0.761687, 0.465686, -0.19084, -0.59173, -0.783222, -33.6864, 10.4122, 29.5201)
+
+[node name="vehicle-convertible25" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.59148, -0.785922, -0.180215, -0.798082, 0.538761, 0.269817, -0.114962, 0.303418, -0.945898, -34.3491, 12.1621, 25.1539)
+
+[node name="fence-broken25" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.841693, 0.520056, 0.145243, 0.5205, 0.853017, -0.0379752, -0.143644, 0.0436354, -0.988667, -23.5006, 17.017, 3.72361)
+
+[node name="ladder-broken48" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.934005, 0, 0.35726, 0.0815077, 0.973627, 0.21309, -0.347838, 0.228147, -0.909372, -36.3407, 11.2905, 20.4049)
+
+[node name="platform-ramp54" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.787699, 0.449169, -0.421636, 0.490878, -0.044067, 0.870113, 0.372248, -0.892359, -0.255199, -38.4847, 12.7844, 18.7309)
+
+[node name="platform-ramp55" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.866066, 0.248161, 0.433988, -0.38964, -0.208829, 0.896979, 0.313225, -0.945942, -0.0841664, -35.8871, 8.97046, 23.9972)
+
+[node name="ladder-long25" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.277342, 0.261121, -0.924606, -0.541996, 0.83713, 0.0738416, 0.793298, 0.480654, 0.373698, -34.7305, 9.9357, 26.1864)
+
+[node name="vehicle24" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.474073, 0.811588, 0.341438, 0.877307, -0.402474, -0.261434, -0.0747567, 0.423485, -0.902814, -34.1079, 9.77104, 28.183)
+
+[node name="wall24" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.934005, 0, 0.35726, 0.0815077, 0.973627, 0.21309, -0.347838, 0.228147, -0.909372, -33.4028, 6.5382, 26.9707)
+
+[node name="wheelchair25" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.337195, -0.899099, -0.279144, -0.940907, 0.331774, 0.0679618, 0.0315086, 0.285565, -0.957841, -33.4753, 9.84168, 26.5876)
+
+[node name="ladder-broken49" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.812418, 0.193837, -0.549913, 0.48251, -0.752993, 0.447421, -0.327354, -0.628831, -0.705274, -33.1071, 9.01092, 30.1329)
+
+[node name="poles24" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.93472, 0, -0.355384, -0.0810798, 0.973627, 0.213254, 0.346012, 0.228147, -0.910069, -35.4467, 13.1229, 17.9524)
+
+[node name="poles25" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.817783, 0.35981, -0.449186, 0.503554, 0.825254, -0.255713, 0.278685, -0.435307, -0.856062, -35.9654, 10.4243, 21.5184)
+
+[node name="vehicle-convertible26" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.208427, -0.74937, 0.628492, -0.78832, -0.509066, -0.345545, 0.578886, -0.423432, -0.696848, -36.7745, 16.2671, 6.98176)
+
+[node name="fence-broken26" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.13061, -0.0400922, 0.990623, 0.281727, 0.956492, 0.0758558, -0.950564, 0.288993, -0.113633, -24.7788, 21.8521, -7.18214)
+
+[node name="ladder-broken50" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.609671, -0.681182, -0.405331, -0.194374, -0.367267, 0.909579, -0.768453, 0.63333, 0.0915079, -34.9097, 15.238, 3.79331)
+
+[node name="platform-ramp56" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.590285, 0.199277, -0.78221, 0.807056, -0.163639, 0.567347, -0.0149405, -0.966183, -0.257422, -36.1455, 16.0158, 1.05494)
+
+[node name="platform-ramp57" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.639771, 0.741186, 0.203313, -0.121478, -0.163692, 0.979004, 0.758905, -0.651036, -0.0146881, -35.8809, 13.2617, 7.48706)
+
+[node name="ladder-long26" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.741337, -0.58249, -0.333355, -0.636771, 0.767376, 0.0752152, 0.211996, 0.268031, -0.939796, -36.2729, 14.5861, 9.7574)
+
+[node name="vehicle25" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.777789, -0.393919, 0.489767, -0.62489, -0.400952, 0.669888, -0.0675087, -0.827083, -0.558012, -37.0118, 14.5643, 12.3424)
+
+[node name="wall25" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.609671, -0.333991, 0.718854, -0.194374, 0.942199, 0.272909, -0.768453, 0.0266579, -0.639351, -34.8288, 11.7231, 11.665)
+
+[node name="wheelchair26" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.609671, -0.333991, 0.718854, -0.194374, 0.942199, 0.272909, -0.768453, 0.0266579, -0.639351, -34.9101, 14.9279, 14.7488)
+
+[node name="ladder-broken51" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.73381, 0.652726, -0.18834, 0.67849, -0.690158, 0.251664, 0.0342832, -0.31246, -0.949312, -36.7701, 14.2873, 14.0852)
+
+[node name="vehicle-convertible27" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.279861, -0.951294, 0.129295, -0.947342, 0.295476, 0.123445, -0.155635, -0.0879387, -0.983893, -36.151, 15.3873, 9.5057)
+
+[node name="fence-broken27" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(-0.273918, 0.0176668, 0.961591, 0.23511, 0.970726, 0.0491389, -0.932574, 0.23954, -0.270053, -27.1679, 19.4863, -9.56008)
+
+[node name="ladder-broken52" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.720125, -0.333991, 0.60817, -0.236818, 0.942199, 0.237019, -0.652179, 0.0266581, -0.757596, -35.9029, 13.5629, 4.61803)
+
+[node name="platform-ramp58" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.435137, 0.748905, -0.499798, 0.737003, 0.0225952, 0.675512, 0.517187, -0.662292, -0.542114, -37.5566, 14.1873, 2.06728)
+
+[node name="platform-ramp59" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.751131, 0.632225, 0.189988, -0.0790744, -0.199555, 0.976691, 0.655401, -0.748646, -0.0998993, -36.27, 11.7948, 8.52081)
+
+[node name="ladder-long27" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(0.0841462, -0.162558, -0.983105, -0.364395, 0.913247, -0.182197, 0.927435, 0.37357, 0.0176109, -36.3154, 13.2433, 10.7484)
+
+[node name="vehicle26" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.227096, 0.664153, 0.71227, 0.971061, -0.0988921, -0.217396, -0.0739462, 0.741027, -0.667391, -36.4757, 13.4408, 12.8309)
+
+[node name="wall26" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.720125, -0.333991, 0.60817, -0.236818, 0.942199, 0.237019, -0.652179, 0.0266581, -0.757596, -34.5671, 10.4908, 12.5618)
+
+[node name="wheelchair27" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.0727382, -0.992612, 0.0971125, -0.993061, 0.0630597, -0.0992623, 0.0924052, -0.103659, -0.990311, -35.3265, 13.5708, 11.5609)
+
+[node name="ladder-broken53" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.724247, 0.602144, -0.335992, 0.679403, -0.706402, 0.198515, -0.117811, -0.372047, -0.920707, -36.1304, 13.1854, 15.1105)
+
+[node name="poles26" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.942224, -0.333991, -0.0257717, -0.334506, 0.9422, 0.0191431, 0.0178885, 0.0266581, -0.999485, -34.6444, 15.3739, 2.31403)
+
+[node name="poles27" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.961325, 0.275216, -0.0104495, 0.250311, 0.857247, -0.44997, -0.114881, -0.435183, -0.892983, -35.7705, 12.9472, 5.93492)
+
+[node name="vehicle-convertible28" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.15223, -0.286098, 0.946031, -0.910655, -0.331388, -0.246756, 0.3841, -0.899071, -0.210089, -36.3257, 19.4725, -1.21681)
+
+[node name="fence-broken28" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.443985, -0.345586, 0.826709, 0.498664, 0.861849, 0.092467, -0.744454, 0.371196, 0.554979, -20.8479, 26.847, 0.681726)
+
+[node name="ladder-broken54" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.0192667, -0.903549, -0.428051, 0.0351004, -0.427255, 0.90345, -0.999198, -0.0324312, 0.0234832, -32.8166, 18.9775, -2.68102)
+
+[node name="platform-ramp60" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.418718, 0.769951, -0.481508, 0.730554, 0.0293521, 0.682223, 0.539412, -0.637427, -0.550201, -32.11, 20.4412, -5.32471)
+
+[node name="platform-ramp61" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.0294531, 0.993795, 0.107259, -0.342916, -0.0907473, 0.934973, 0.938904, -0.0643186, 0.338116, -35.7635, 16.3568, -0.966173)
+
+[node name="ladder-long28" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.66995, -0.667579, 0.324817, -0.592823, 0.744421, 0.307242, -0.446908, 0.0132781, -0.894481, -37.571, 17.1939, 0.792881)
+
+[node name="vehicle27" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.685074, 0.236324, 0.689075, -0.667894, -0.173896, 0.723656, 0.290845, -0.955987, 0.0387077, -39.7628, 16.6886, 2.26584)
+
+[node name="wall27" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.0192665, -0.333991, 0.942379, 0.0351003, 0.942199, 0.33321, -0.999198, 0.0266581, 0.0298763, -37.4679, 13.8621, 2.4691)
+
+[node name="wheelchair28" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.0192665, -0.333991, 0.942379, 0.0351003, 0.942199, 0.33321, -0.999198, 0.0266581, 0.0298763, -39.6585, 16.3219, 5.45872)
+
+[node name="ladder-broken55" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.50732, 0.745262, 0.432679, 0.581171, -0.666611, 0.466767, 0.636292, 0.0146608, -0.771309, -40.6494, 16.0216, 3.65918)
+
+[node name="vehicle-convertible29" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.0620343, -0.702409, 0.709065, -0.860209, 0.39791, 0.318918, -0.506155, -0.59016, -0.628903, -37.3678, 18.0149, 0.862275)
+
+[node name="fence-broken29" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.328522, -0.272409, 0.90436, 0.450282, 0.88686, 0.103566, -0.830253, 0.373193, 0.414014, -20.8968, 25.127, -3.05975)
+
+[node name="ladder-broken56" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.136795, -0.333991, 0.932597, -0.02047, 0.942199, 0.334428, -0.990388, 0.026658, -0.135725, -34.0024, 17.2683, -3.06152)
+
+[node name="platform-ramp62" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.0308074, 0.995433, -0.0903518, 0.563103, 0.0919699, 0.821253, 0.825812, -0.0255769, -0.563365, -33.7287, 18.5828, -5.85934)
+
+[node name="platform-ramp63" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.178225, 0.972427, 0.150405, -0.290217, -0.0941043, 0.952322, 0.940219, -0.213377, 0.265443, -36.6235, 14.7467, -0.767068)
+
+[node name="ladder-long29" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.493058, -0.416217, -0.763974, -0.561563, 0.82296, -0.0859275, 0.664485, 0.386653, -0.639499, -38.1424, 15.68, 1.20364)
+
+[node name="vehicle28" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.163339, 0.0582151, 0.984851, 0.937691, -0.319479, -0.136633, 0.306685, 0.945804, -0.106771, -39.5832, 15.44, 2.70962)
+
+[node name="wall28" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(-0.136795, -0.333991, 0.932597, -0.02047, 0.942199, 0.334428, -0.990388, 0.026658, -0.135725, -37.7505, 12.4465, 3.02354)
+
+[node name="wheelchair29" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(-0.0535783, -0.710444, 0.701711, -0.977943, 0.179404, 0.106966, -0.201883, -0.680503, -0.704386, -37.9027, 15.7283, 2.50195)
+
+[node name="ladder-broken57" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.595075, 0.744257, 0.303261, 0.615666, -0.664709, 0.423224, 0.516568, -0.0651419, -0.853765, -40.7268, 14.6686, 4.57473)
+
+[node name="poles28" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.723046, -0.333991, 0.604694, -0.237957, 0.942199, 0.235876, -0.648522, 0.0266582, -0.760729, -31.6924, 19.4018, -3.59381)
+
+[node name="poles29" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.690568, 0.433925, 0.578641, 0.360775, 0.900062, -0.2444, -0.626864, 0.0399849, -0.778102, -34.6865, 16.374, -2.13234)
+
+[node name="vehicle-convertible30" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.194703, -0.225947, 0.954484, -0.941462, -0.229982, -0.246488, 0.275208, -0.946602, -0.167942, -29.46, 16.2057, -11.1681)
+
+[node name="fence-broken30" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.618567, -0.479031, 0.62282, 0.581082, 0.812442, 0.0477618, -0.528884, 0.332365, 0.780907, -13.9522, 29.5615, 2.98106)
+
+[node name="ladder-broken58" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.0919099, -0.905845, -0.41352, 0.137417, -0.399765, 0.906258, -0.98624, -0.140119, 0.0877362, -25.8632, 15.7799, -12.4266)
+
+[node name="platform-ramp64" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(0.390809, 0.814328, -0.429113, 0.660781, 0.0763486, 0.746686, 0.640809, -0.575361, -0.508256, -24.9432, 17.4908, -14.8468)
+
+[node name="platform-ramp65" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.0441006, 0.994195, 0.0981388, -0.438463, -0.107529, 0.892294, 0.897666, -0.00367957, 0.440661, -28.9694, 13.0682, -11.2057)
+
+[node name="ladder-long30" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.645733, -0.654302, 0.393597, -0.52731, 0.75494, 0.389884, -0.552244, 0.0442132, -0.832509, -30.8849, 13.7627, -9.49972)
+
+[node name="vehicle29" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.703589, -0.080055, 0.706083, -0.710607, -0.0800831, 0.699017, 0.000585765, -0.993568, -0.113233, -29.8003, 13.1612, -7.27613)
+
+[node name="wall29" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.312641, -0.333991, 0.889217, 0.137417, 0.942199, 0.305577, -0.939879, 0.0266578, 0.340466, -30.6786, 16.6374, -5.96819)
+
+[node name="wheelchair30" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.312641, -0.333991, 0.889217, 0.137417, 0.942199, 0.305577, -0.939879, 0.0266578, 0.340466, -33.6713, 18.8279, -3.51202)
+
+[node name="ladder-broken59" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.292928, 0.71276, 0.637312, 0.500119, -0.682316, 0.533222, 0.814907, 0.162536, -0.556334, -34.0855, 18.7386, -5.54445)
+
+[node name="vehicle-convertible31" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.039665, -0.651259, 0.757818, -0.80172, 0.473404, 0.364876, -0.596383, -0.593084, -0.540905, -30.6736, 14.5671, -9.33084)
+
+[node name="fence-broken31" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.535667, -0.410898, 0.737716, 0.54001, 0.838327, 0.0748276, -0.649194, 0.358291, 0.670952, -12.8235, 28.2414, -0.752921)
+
+[node name="ladder-broken60" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(-0.0652848, -0.319302, 0.945402, 0.0850075, 0.9422, 0.32409, -0.994239, 0.101525, -0.0343682, -27.0467, 14.148, -13.0658)
+
+[node name="platform-ramp66" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.0809408, 0.996077, -0.0357646, 0.475573, 0.0701298, 0.876877, 0.875944, 0.0539657, -0.479385, -26.5499, 15.737, -15.6848)
+
+[node name="platform-ramp67" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.443007, 0.891356, -0.0960729, -0.389776, -0.0949908, 0.915998, 0.807354, 0.443239, 0.389511, -30.5991, 17.8302, -9.80863)
+
+[node name="ladder-long31" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.66282, -0.517778, -0.540903, -0.615024, 0.788507, -0.00114935, 0.427101, 0.331907, -0.841085, -30.9637, 18.5917, -7.17665)
+
+[node name="vehicle30" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.0587359, -0.220757, 0.973558, 0.896886, -0.416561, -0.148566, 0.438344, 0.881898, 0.173527, -32.7825, 18.2325, -6.19466)
+
+[node name="wall30" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.161331, -0.333991, 0.928667, 0.0850075, 0.9422, 0.32409, -0.983232, 0.026658, 0.180398, -31.1016, 15.1794, -5.67396)
+
+[node name="wheelchair31" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.0155567, -0.479635, 0.877331, -0.950355, 0.265629, 0.16207, -0.310779, -0.836297, -0.451691, -31.1176, 18.5001, -5.86771)
+
+[node name="ladder-broken61" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.411813, 0.735306, 0.538271, 0.544647, -0.672176, 0.501537, 0.730596, 0.0866287, -0.677293, -34.4192, 17.3007, -4.84024)
+
+[node name="poles30" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.67822, -0.319301, 0.661864, -0.15238, 0.942199, 0.298398, -0.718886, 0.101525, -0.687674, -24.6691, 16.2689, -13.209)
+
+[node name="poles31" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.63742, 0.444841, 0.629136, 0.439975, 0.880441, -0.176763, -0.632549, 0.164132, -0.75693, -27.8108, 13.1796, -12.2853)
+
+[node name="vehicle-convertible32" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(-0.342129, 0.154771, 0.926819, -0.938781, -0.0138054, -0.344239, -0.0404828, -0.987853, 0.150019, -22.5748, 25.3657, -15.4411)
+
+[node name="fence-broken32" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.72204, -0.691833, -0.00516361, 0.684252, 0.715191, -0.142483, 0.102267, 0.0993447, 0.989784, -19.2203, 31.4985, 11.3916)
+
+[node name="ladder-broken62" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.693506, -0.610029, -0.383294, 0.305336, -0.233009, 0.923297, -0.652548, -0.757345, 0.0246706, -20.1508, 20.7233, -14.2192)
+
+[node name="platform-ramp68" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.59531, 0.761008, 0.257822, 0.466287, 0.0658889, 0.882176, 0.654356, 0.645387, -0.394073, -18.635, 26.0281, -19.1008)
+
+[node name="platform-ramp69" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.598006, 0.77354, -0.20982, -0.588124, -0.245652, 0.770562, 0.544518, 0.584201, 0.601839, -23.3071, 18.3022, -15.8527)
+
+[node name="ladder-long32" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.403421, -0.573215, 0.713216, -0.316808, 0.818749, 0.478834, -0.85842, -0.0327806, -0.5119, -24.6834, 22.882, -15.0328)
+
+[node name="vehicle31" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(0.449607, 0.648361, 0.614396, -0.833497, 0.0572249, 0.549553, 0.32115, -0.75918, 0.566135, -27.3235, 22.3904, -14.9032)
+
+[node name="wall31" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.693506, -0.319302, 0.64583, 0.305336, 0.942199, 0.137952, -0.652549, 0.101524, 0.750915, -26.7394, 15.3032, -15.459)
+
+[node name="wheelchair32" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.483055, -0.278103, 0.830251, 0.305336, 0.942199, 0.137952, -0.820626, 0.186867, 0.540049, -28.7284, 21.1447, -12.2928)
+
+[node name="ladder-broken63" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.171074, 0.631391, 0.756359, 0.28264, -0.766861, 0.57623, 0.943848, 0.115199, -0.309646, -28.7771, 21.5346, -14.3314)
+
+[node name="vehicle-convertible33" parent="." instance=ExtResource("1_c4e26")]
+transform = Transform3D(0.153466, -0.334201, 0.929924, -0.661686, 0.664184, 0.347897, -0.733908, -0.668707, -0.119206, -24.5099, 23.6019, -14.6182)
+
+[node name="fence-broken33" parent="." instance=ExtResource("2_8t62f")]
+transform = Transform3D(0.737762, -0.658702, 0.147713, 0.673333, 0.733691, -0.0912187, -0.0482899, 0.166757, 0.984815, -15.8577, 31.0855, 9.05028)
+
+[node name="ladder-broken64" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.577193, -0.319302, 0.751595, 0.278328, 0.9422, 0.186533, -0.767713, 0.101525, 0.632701, -20.6504, 19.426, -15.8129)
+
+[node name="platform-ramp70" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.92274, 0.214039, 0.320529, 0.309514, -0.08407, 0.947171, 0.229679, 0.973201, 0.0113267, -18.0324, 22.2386, -39.5118)
+
+[node name="platform-ramp71" parent="." instance=ExtResource("4_aq3r7")]
+transform = Transform3D(-0.493735, 0.85986, -0.129872, -0.565316, -0.203884, 0.79928, 0.66079, 0.468052, 0.586757, -23.9708, 16.8803, -16.8065)
+
+[node name="ladder-long33" parent="." instance=ExtResource("5_eum3g")]
+transform = Transform3D(-0.76306, -0.522103, -0.380982, -0.625495, 0.744983, 0.231855, 0.162773, 0.415221, -0.89504, -25.4278, 21.4412, -15.4287)
+
+[node name="vehicle32" parent="." instance=ExtResource("6_85ffg")]
+transform = Transform3D(-0.147685, -0.583193, 0.798796, 0.771773, -0.573034, -0.275678, 0.618511, 0.575776, 0.534721, -28.5415, 17.1053, -16.1851)
+
+[node name="wall32" parent="." instance=ExtResource("7_h6hfg")]
+transform = Transform3D(0.577193, -0.319302, 0.751595, 0.278328, 0.9422, 0.186533, -0.767713, 0.101525, 0.632701, -27.2368, 13.8639, -15.7276)
+
+[node name="wheelchair33" parent="." instance=ExtResource("8_t1f87")]
+transform = Transform3D(0.158634, -0.0644274, 0.985233, -0.858323, 0.484179, 0.169862, -0.487973, -0.872594, 0.021508, -27.193, 17.1343, -15.1215)
+
+[node name="ladder-broken65" parent="." instance=ExtResource("3_pspr3")]
+transform = Transform3D(0.0434551, 0.627471, 0.777426, 0.332553, -0.742871, 0.580992, 0.942083, 0.233289, -0.240949, -30.5997, 16.0667, -15.9274)
+
+[node name="poles32" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.0698382, -0.319302, 0.945076, 0.0834454, 0.942199, 0.324496, -0.994062, 0.101524, -0.0391571, -18.735, 21.1748, -13.9569)
+
+[node name="poles33" parent="." instance=ExtResource("9_1tdjg")]
+transform = Transform3D(-0.0976547, 0.233711, 0.96739, 0.63712, 0.761424, -0.119637, -0.764553, 0.60466, -0.223259, -21.7279, 18.4475, -15.9247)
