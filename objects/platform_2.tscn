@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnixcerdyevh6"]
+
+[ext_resource type="PackedScene" uid="uid://kxlanit681hg" path="res://models/props/platform.glb" id="1_0i5ob"]
+[ext_resource type="Material" uid="uid://dcsron2k32rpe" path="res://Material/dark_grey_material_3d.tres" id="2_g8or1"]
+
+[node name="platform2" instance=ExtResource("1_0i5ob")]
+
+[node name="platform" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_g8or1")

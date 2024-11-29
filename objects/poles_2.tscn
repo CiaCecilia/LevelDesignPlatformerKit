@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8cnpjl0np7tt"]
+
+[ext_resource type="PackedScene" uid="uid://bw7nsi1v8g30s" path="res://models/props/poles.glb" id="1_eiqcr"]
+[ext_resource type="Material" uid="uid://bapldfrhacuh7" path="res://Material/dark_brown_material_3d.tres" id="2_hupym"]
+
+[node name="poles2" instance=ExtResource("1_eiqcr")]
+
+[node name="poles" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_hupym")

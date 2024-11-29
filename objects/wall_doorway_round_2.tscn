@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsswuan3wwpwj"]
+
+[ext_resource type="PackedScene" uid="uid://ctm7k8us6em8" path="res://models/prototyping/models/wall-doorway-round.glb" id="1_i2tml"]
+
+[node name="wall-doorway-round2" instance=ExtResource("1_i2tml")]

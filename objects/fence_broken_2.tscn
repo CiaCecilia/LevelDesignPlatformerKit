@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://crv1t7lrqdkx0"]
+
+[ext_resource type="PackedScene" uid="uid://bca4l5fdc13un" path="res://models/props/fence-broken.glb" id="1_4rahc"]
+[ext_resource type="Material" uid="uid://6hp742bx8xw5" path="res://Material/darker_grey_material_3d.tres" id="2_d4gsv"]
+
+[node name="fence-broken2" instance=ExtResource("1_4rahc")]
+
+[node name="fence-broken" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_d4gsv")

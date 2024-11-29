@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch54hxnoado4n"]
+
+[ext_resource type="PackedScene" uid="uid://dcwanjaahb4g1" path="res://models/prototyping/models/vehicle-convertible.glb" id="1_emcwn"]
+[ext_resource type="Material" uid="uid://dcsron2k32rpe" path="res://Material/dark_grey_material_3d.tres" id="2_g8tax"]
+
+[node name="vehicle-convertible" instance=ExtResource("1_emcwn")]
+
+[node name="body" parent="." index="4"]
+surface_material_override/0 = ExtResource("2_g8tax")

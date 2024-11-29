@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgdv7gqrlsw45"]
+
+[ext_resource type="PackedScene" uid="uid://c0n2315wnksre" path="res://models/prototyping/models/shape-cube-half.glb" id="1_x1a2a"]
+
+[node name="shape-cube-half2" instance=ExtResource("1_x1a2a")]

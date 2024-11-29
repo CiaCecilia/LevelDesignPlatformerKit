@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcdg712lcyl0r"]
+
+[ext_resource type="PackedScene" uid="uid://dclbr6h5m4kw8" path="res://models/prototyping/models/wheelchair.glb" id="1_rmavl"]
+[ext_resource type="Material" uid="uid://6hp742bx8xw5" path="res://Material/darker_grey_material_3d.tres" id="2_m4ofu"]
+
+[node name="wheelchair2" instance=ExtResource("1_rmavl")]
+
+[node name="wheelchair" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_m4ofu")
