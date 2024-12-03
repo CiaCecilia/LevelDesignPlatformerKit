@@ -2923,24 +2923,10 @@ draw_pass_1 = SubResource("SphereMesh_gibmh")
 [node name="Dressing3" parent="World" instance=ExtResource("42_cf5ma")]
 transform = Transform3D(0.43122, 0, 0.902247, 0, 1, 0, -0.902247, 0, 0.43122, -1.51009, -13.4462, -3.00252)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="World/Dressing3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.6776)
-visible = false
-preprocess = 0.65
-process_material = SubResource("ParticleProcessMaterial_pjij8")
-draw_pass_1 = SubResource("SphereMesh_gibmh")
-
 [node name="Dressing2" parent="World" instance=ExtResource("42_cf5ma")]
 transform = Transform3D(0.971454, 0, -0.237228, 0, 1, 0, 0.237228, 0, 0.971454, 3.4458, -1.51436, 0.501133)
 range_max_amplitude = 2.0
 range_max_vel = 2.0
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="World/Dressing2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.6776)
-visible = false
-preprocess = 0.65
-process_material = SubResource("ParticleProcessMaterial_pjij8")
-draw_pass_1 = SubResource("SphereMesh_gibmh")
 
 [node name="platform-medium2" parent="World" instance=ExtResource("10_gv1mx")]
 transform = Transform3D(1.48883, 0, 0.1827, 0, 1.5, 0, -0.1827, 0, 1.48883, -12.9427, -12.9894, 4.85223)
