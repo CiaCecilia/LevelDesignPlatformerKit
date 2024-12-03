@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bpj3yn7lmrvae"]
+[gd_scene load_steps=66 format=3 uid="uid://bpj3yn7lmrvae"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_obxi2"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_oiy0w"]
@@ -97,10 +97,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
-
-[sub_resource type="FogMaterial" id="FogMaterial_ee6c1"]
-density = 0.3013
-albedo = Color(0.821005, 0.635351, 0.863378, 1)
 
 [sub_resource type="Curve3D" id="Curve3D_76kk6"]
 _data = {
@@ -755,11 +751,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2828, 8.01136, 20.8326)
 
 [node name="platform-falling11" parent="World/Part2/Falling_Challange2" instance=ExtResource("35_qfuxq")]
 transform = Transform3D(1.02266, 0.293321, -0.944591, -0.339137, 0.955801, 0.271223, 1.19772, 0.0201884, 0.883326, 0.0620909, 16.8917, -15.4162)
-
-[node name="FogVolume3" type="FogVolume" parent="World/Part2/Falling_Challange2/platform-falling11"]
-transform = Transform3D(0.312971, 0.520751, 0.552418, -0.0637708, 0.826228, -0.211675, -0.700281, 0.0303944, 0.246722, 10.4458, -10.9444, 25.3215)
-size = Vector3(10.5472, 2.74561, 12.4704)
-material = SubResource("FogMaterial_ee6c1")
 
 [node name="platform-falling14" parent="World/Part2/Falling_Challange2" instance=ExtResource("35_qfuxq")]
 transform = Transform3D(0.492775, 0.0869965, -1.2528, 0.287661, 0.972905, 0.194087, 1.50659, -0.214216, 0.372708, 1.65509, 16.4584, -11.1926)

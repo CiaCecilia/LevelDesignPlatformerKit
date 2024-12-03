@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cdjoifc1x2fii"]
+[gd_scene load_steps=20 format=4 uid="uid://cdjoifc1x2fii"]
 
 [ext_resource type="PackedScene" uid="uid://biyd6x403gvny" path="res://models/core_models/platform-falling.glb" id="1_iqw72"]
 [ext_resource type="Script" path="res://objects/platform_falling.gd" id="2_2qrky"]
@@ -156,7 +156,15 @@ distance_fade_max_distance = 5.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_n8yid"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdlsl"]
+albedo_color = Color(0.0214346, 0.0214346, 0.0214346, 1)
+
 [sub_resource type="SphereMesh" id="SphereMesh_5xdsf"]
+material = SubResource("StandardMaterial3D_kdlsl")
+radius = 0.05
+height = 0.05
+radial_segments = 100
+rings = 100
 
 [node name="platform-falling" instance=ExtResource("1_iqw72")]
 script = ExtResource("2_2qrky")
@@ -190,6 +198,17 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_p8ysg")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." index="5"]
+transform = Transform3D(0.640921, 0, 0, 0, 1, 0, 0, 0, 0.925052, 0, 0, 0)
+visibility_range_end = 1.1
+visibility_range_end_margin = 110.11
+visibility_range_fade_mode = 1
+amount = 4000
+amount_ratio = 0.2552
+lifetime = 11.29
+interp_to_end = 0.08
+speed_scale = 1.03
+randomness = 0.48
+trail_lifetime = 0.35
 process_material = SubResource("ParticleProcessMaterial_n8yid")
 draw_pass_1 = SubResource("SphereMesh_5xdsf")
 
