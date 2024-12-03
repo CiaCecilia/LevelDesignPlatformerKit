@@ -12,11 +12,12 @@ uv1_offset = Vector3(2.97, 0, 0)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8y38s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cypsh"]
-size = Vector3(2, 0.5, 2)
+size = Vector3(2.4198, 0.5, 2.50244)
 
 [node name="platform-moving" instance=ExtResource("1_acgun")]
 
 [node name="platform-falling2" parent="." index="0"]
+transform = Transform3D(2.4531, 0, 0, 0, 1, 0, 0, 0, 2.48221, 0, 0, 0)
 visible = false
 surface_material_override/0 = SubResource("StandardMaterial3D_xec8c")
 
@@ -26,6 +27,7 @@ physics_material_override = SubResource("PhysicsMaterial_8y38s")
 sync_to_physics = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.150269, 0, 0.0522461)
 shape = SubResource("BoxShape3D_cypsh")
 
 [node name="flowers" parent="." index="2" instance=ExtResource("3_se2sa")]
@@ -43,14 +45,59 @@ transform = Transform3D(0.35006, 0, -0.936727, 0, 1, 0, 0.936727, 0, 0.35006, 0.
 [node name="flowers5" parent="." index="6" instance=ExtResource("3_se2sa")]
 transform = Transform3D(0.35006, 0, -0.936727, 0, 1, 0, 0.936727, 0, 0.35006, 0.061733, 0.5, 0.131931)
 
-[node name="heart2" parent="." index="7" instance=ExtResource("4_djgp5")]
-transform = Transform3D(4.86638, 0, 0, 0, 1.06277, 1.07202, 0, -4.65973, 0.244501, 0.142533, 0.35982, 0.0747681)
+[node name="flowers11" parent="." index="7" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.35006, 0, -0.936727, 0, 1, 0, 0.936727, 0, 0.35006, 0.416782, 0.5, 0.517359)
 
-[node name="heart3" parent="." index="8" instance=ExtResource("4_djgp5")]
-transform = Transform3D(-0.184171, -4.4239, 0.414039, 0.0856299, 1.79776, 1.01861, -4.86214, 0.199232, 0.00225616, 0.404217, 0.120811, 0.0461787)
+[node name="flowers12" parent="." index="8" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.986523, -0.0507672, 0.155544, 0.0771015, 0.982722, -0.168263, -0.144314, 0.177989, 0.973393, 0.546707, 0.5, -0.438716)
 
-[node name="heart4" parent="." index="9" instance=ExtResource("4_djgp5")]
-transform = Transform3D(-4.86014, -0.240887, 0.0052591, -0.0210316, 0.855522, 1.08178, -0.245474, 4.69602, -0.196809, 0.197398, 0.35982, -0.117799)
+[node name="flowers6" parent="." index="9" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.937711, -0.178287, -0.29818, 0.169904, 0.983979, -0.0540273, 0.303035, 0, 0.952979, 0.486754, 0.5, 0.097714)
 
-[node name="heart5" parent="." index="10" instance=ExtResource("4_djgp5")]
-transform = Transform3D(-0.0619536, 4.4266, -0.414371, 0.0726147, 1.80193, 1.01827, 4.86544, 0.0294725, -0.0204737, -0.128456, 0.120811, 0.120644)
+[node name="flowers7" parent="." index="10" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.399549, 0, -0.916712, 0.128548, 0.990119, 0.0560277, 0.907654, -0.140227, 0.395601, -0.235587, 0.5, 0.387914)
+
+[node name="flowers8" parent="." index="11" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.382357, 0.290184, -0.877266, -0.115943, 0.956971, 0.266016, 0.916712, 0, 0.399549, -0.452079, 0.5, -0.231232)
+
+[node name="flowers9" parent="." index="12" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.0497386, 0, -0.998762, -0.198267, 0.980098, -0.00987374, 0.978885, 0.198513, 0.0487487, 0.335297, 0.5, -0.446695)
+
+[node name="flowers10" parent="." index="13" instance=ExtResource("3_se2sa")]
+transform = Transform3D(0.0497386, 0, -0.998762, -0.201973, 0.979339, -0.0100583, 0.978127, 0.202223, 0.048711, 0.0223107, 0.5, -0.43116)
+
+[node name="heart2" parent="." index="14" instance=ExtResource("4_djgp5")]
+transform = Transform3D(5.091, 0, 0, 0, 1.11183, 1.12121, 0, -4.87482, 0.25572, 0.142533, 0.35982, 0.0747681)
+
+[node name="heart6" parent="." index="15" instance=ExtResource("4_djgp5")]
+transform = Transform3D(3.73046, 3.31727, -0.174015, 0, 1.11182, 1.12121, 3.46438, -3.57205, 0.18738, 0.645197, 0.492199, -0.510298)
+
+[node name="heart7" parent="." index="16" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-0.0427391, 4.87465, -0.255711, 0, 1.11182, 1.12121, 5.09082, 0.0409242, -0.00214677, 0.534329, 0.492199, 0.180755)
+
+[node name="heart8" parent="." index="17" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-3.86851, 3.16898, -0.166236, -1.07285e-07, 1.11182, 1.12121, 3.30951, 3.70424, -0.194315, 0.534329, 0.492199, 0.647043)
+
+[node name="heart9" parent="." index="18" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-5.06469, 0.494915, -0.0259619, -3.23702e-10, 1.11182, 1.12121, 0.516863, 4.84963, -0.254398, -0.131466, 0.492199, 0.618963)
+
+[node name="heart10" parent="." index="19" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-4.22157, -2.72462, 0.142927, 9.11004e-09, 1.11183, 1.12121, -2.84545, 4.04231, -0.212049, -0.506264, 0.492199, 0.504764)
+
+[node name="heart11" parent="." index="20" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-0.209281, -4.8707, 0.255504, 1.01748e-08, 1.11182, 1.12121, -5.0867, 0.200394, -0.0105121, -0.267882, 0.492199, 0.236233)
+
+[node name="heart12" parent="." index="21" instance=ExtResource("4_djgp5")]
+transform = Transform3D(3.57561, -3.4701, 0.182032, 7.05631e-09, 1.11182, 1.12121, -3.62399, -3.42378, 0.179602, -0.490762, 0.492199, -0.552774)
+
+[node name="heart13" parent="." index="22" instance=ExtResource("4_djgp5")]
+transform = Transform3D(5.08718, 0.188835, -0.00990581, 1.14339e-07, 1.11182, 1.12121, 0.197209, -4.87116, 0.255528, 0.0193602, 0.492199, -0.552774)
+
+[node name="heart3" parent="." index="23" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-0.184171, -4.4239, 0.414039, 0.0856299, 1.79776, 1.01861, -4.86214, 0.199232, 0.00225612, 0.404217, 0.120811, 0.0461787)
+
+[node name="heart4" parent="." index="24" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-4.86014, -0.240887, 0.0052591, -0.0210316, 0.855523, 1.08178, -0.245474, 4.69602, -0.196809, 0.197398, 0.35982, -0.117799)
+
+[node name="heart5" parent="." index="25" instance=ExtResource("4_djgp5")]
+transform = Transform3D(-0.0619536, 4.4266, -0.41437, 0.0726147, 1.80193, 1.01827, 4.86544, 0.0294726, -0.0204736, -0.128456, 0.120811, 0.120644)

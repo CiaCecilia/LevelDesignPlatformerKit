@@ -46,4 +46,5 @@ func _on_body_entered(_body):
 		Audio.play("res://sounds/fall.ogg") # Play sound
 		scale = Vector3(1.25, 1, 1.25) # Animate scale
 		
+	await get_tree().create_timer(1).timeout
 	falling = true

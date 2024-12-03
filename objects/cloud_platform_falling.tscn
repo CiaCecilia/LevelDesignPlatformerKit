@@ -199,6 +199,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p8ysg")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." index="5"]
 transform = Transform3D(0.640921, 0, 0, 0, 1, 0, 0, 0, 0.925052, 0, 0, 0)
+visible = false
 visibility_range_end = 1.1
 visibility_range_end_margin = 110.11
 visibility_range_fade_mode = 1
