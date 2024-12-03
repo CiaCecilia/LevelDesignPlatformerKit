@@ -4,10 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bunxb353h3lje" path="res://objects/damage_dealer_area_3d.tscn" id="2_gb5j1"]
 [ext_resource type="Script" path="res://objects/cloud.gd" id="2_k0nqx"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bgyu"]
-albedo_color = Color(5.65536e-07, 0.276233, 0.276233, 0)
-emission_enabled = true
-emission = Color(0.169245, 0.169245, 0.169245, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwlot"]
+albedo_color = Color(0.237335, 0.297194, 0.0885635, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_51hsx"]
 size = Vector3(2.5, 1, 1)
@@ -19,7 +17,7 @@ size = Vector3(2, 0.75, 0.75)
 script = ExtResource("2_k0nqx")
 
 [node name="spike-block-wide" parent="." index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_5bgyu")
+surface_material_override/0 = SubResource("StandardMaterial3D_rwlot")
 
 [node name="DamageDealerArea3D" parent="." index="1" instance=ExtResource("2_gb5j1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

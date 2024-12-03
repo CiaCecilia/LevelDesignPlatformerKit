@@ -1,14 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b36jf5an84wmy"]
+[gd_scene load_steps=4 format=3 uid="uid://b36jf5an84wmy"]
 
 [ext_resource type="PackedScene" uid="uid://b87snreold7v2" path="res://models/props/ladder-long.glb" id="1_eipa0"]
-[ext_resource type="Script" path="res://objects/platform_falling.gd" id="2_r3whe"]
 [ext_resource type="Material" uid="uid://doj2c7rl5cufi" path="res://Material/lighter_light_grey_material.tres" id="3_1a5de"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xcale"]
 size = Vector3(0.521912, 2.00125, 0.262756)
 
 [node name="ladder-long2" instance=ExtResource("1_eipa0")]
-script = ExtResource("2_r3whe")
 
 [node name="ladder-long" parent="." index="0"]
 surface_material_override/0 = ExtResource("3_1a5de")

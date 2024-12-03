@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://chqgqgdxmnujr" path="res://objects/vehicle.tscn" id="5_enx1j"]
 [ext_resource type="PackedScene" uid="uid://b8cnpjl0np7tt" path="res://objects/poles_2.tscn" id="6_twerk"]
 
-[node name="Platform_1" type="Node"]
+[node name="Platform_1" type="Node3D"]
 
 [node name="platform-medium14" parent="." instance=ExtResource("1_5aycb")]
 transform = Transform3D(0.926096, -0.194334, -0.323389, 0.177765, 0.98079, -0.0803155, 0.332785, 0.0168926, 0.942851, -9.45399, -0.168955, -2.45486)

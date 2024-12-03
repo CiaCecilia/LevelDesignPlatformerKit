@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cdjoifc1x2fii"]
+[gd_scene load_steps=18 format=4 uid="uid://cdjoifc1x2fii"]
 
 [ext_resource type="PackedScene" uid="uid://biyd6x403gvny" path="res://models/core_models/platform-falling.glb" id="1_iqw72"]
 [ext_resource type="Script" path="res://objects/platform_falling.gd" id="2_2qrky"]
@@ -147,11 +147,16 @@ transparency = 1
 albedo_color = Color(0.000113828, 0.000113828, 0.000113828, 1)
 metallic_specular = 0.0
 emission_enabled = true
-emission = Color(0.0214346, 0.0214346, 0.0214346, 1)
+emission = Color(0.174876, 0.105925, 0.221561, 1)
 emission_energy_multiplier = 0.0
 backlight_enabled = true
 proximity_fade_distance = 0.01
-distance_fade_mode = 2
+distance_fade_mode = 1
+distance_fade_max_distance = 5.0
+
+[sub_resource type="FogMaterial" id="FogMaterial_0ogh4"]
+density = 0.7322
+albedo = Color(0.434279, 0.435122, 0.545973, 1)
 
 [node name="platform-falling" instance=ExtResource("1_iqw72")]
 script = ExtResource("2_2qrky")
@@ -170,7 +175,7 @@ unique_name_in_owner = true
 shape = SubResource("ConcavePolygonShape3D_4mmvt")
 
 [node name="platform-falling2" parent="." index="2"]
-visible = false
+transparency = 1.0
 mesh = SubResource("ArrayMesh_6gl6g")
 
 [node name="FallingPlatformAnimationPlayer" type="AnimationPlayer" parent="." index="3"]
@@ -183,5 +188,15 @@ transform = Transform3D(2.38985, 0, 0, 0, 1.0312, 0, 0, 0, 2.30584, 0, -0.249411
 mesh = SubResource("ArrayMesh_kau0n")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_p8ysg")
+
+[node name="FogVolume" type="FogVolume" parent="." index="5"]
+transform = Transform3D(0.0162762, -0.13067, 0.606597, 0.215405, 0.955801, 0.200113, -0.738745, 0.155333, 0.0532828, 10.6385, -11.5798, 22.5963)
+size = Vector3(3.71051, 2, 3.49658)
+material = SubResource("FogMaterial_0ogh4")
+
+[node name="FogVolume2" type="FogVolume" parent="." index="6"]
+transform = Transform3D(0.0162762, -0.13067, 0.606597, 0.215405, 0.955801, 0.200113, -0.738745, 0.155333, 0.0532828, 10.6385, -11.5798, 22.5963)
+size = Vector3(3.71051, 2, 3.49658)
+material = SubResource("FogMaterial_0ogh4")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]

@@ -11,7 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://dcdg712lcyl0r" path="res://objects/wheelchair_2.tscn" id="8_t1f87"]
 [ext_resource type="PackedScene" uid="uid://b8cnpjl0np7tt" path="res://objects/poles_2.tscn" id="9_1tdjg"]
 
-[node name="Dressing" type="Node"]
+[node name="Dressing" type="Node3D"]
+script = ExtResource("1_ydbkx")
+range_max_amplitude = 1.0
+range_max_vel = 1.0
 
 [node name="vehicle-convertible2" parent="." instance=ExtResource("1_c4e26")]
 transform = Transform3D(-0.418689, 0.881206, 0.219487, -0.796936, -0.240647, -0.55406, -0.435423, -0.406895, 0.803022, 4.29806, 0.833789, -3.33213)

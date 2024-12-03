@@ -11,7 +11,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ckb4v"]
 size = Vector3(2.69214, 1, 2.54126)
 
-[node name="Platform_2" type="Node"]
+[node name="Platform_2" type="Node3D"]
 
 [node name="platform-medium" parent="." instance=ExtResource("1_ffpkg")]
 transform = Transform3D(0.882817, -0.218357, 0.415877, 0.14565, 0.968994, 0.19959, -0.446564, -0.115629, 0.887248, -3.30078, -1.04907, -1.94317)
