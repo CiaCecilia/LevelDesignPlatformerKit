@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://vbb1wwb33dca"]
+
+[ext_resource type="PackedScene" uid="uid://uakeedppa6m1" path="res://models/props/heart.glb" id="1_rrm36"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmkrj"]
+albedo_color = Color(0.967276, 0.839386, 0.963741, 1)
+metallic_specular = 0.87
+emission = Color(0.999959, 0.965904, 1, 1)
+emission_energy_multiplier = 1.32
+
+[node name="heart2" instance=ExtResource("1_rrm36")]
+
+[node name="heart" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_vmkrj")

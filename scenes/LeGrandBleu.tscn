@@ -1991,7 +1991,6 @@ transform = Transform3D(2.39816, -2.08524, 2.42911, 3.27348e-08, 3.03509, 2.6054
 
 [node name="flag" parent="World/End" instance=ExtResource("42_y4e2o")]
 transform = Transform3D(-0.136018, -0.98292, 0.123969, -0.987523, 0.124492, -0.0964366, 0.0793562, -0.135539, -0.987589, -13.9186, -12.1066, 4.62321)
-speedrun_mode = true
 
 [node name="Player2" parent="World/End" instance=ExtResource("40_kma2s")]
 transform = Transform3D(-0.296819, -0.879964, 0.370892, 0.276349, 0.292624, 0.915425, -0.914073, 0.374212, 0.156321, -13.7403, -12.1482, 5.02757)
@@ -2912,6 +2911,10 @@ transform = Transform3D(-0.963228, 0, -0.268684, 0, 1, 0, 0.268684, 0, -0.963228
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0229, -12.3461, 5.66718)
 
 [node name="Dressing" parent="World" instance=ExtResource("42_cf5ma")]
+range_min_amplitude = 0.5
+range_max_amplitude = 0.5
+range_min_vel = 0.5
+range_max_vel = 0.5
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="World/Dressing"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.6776)
@@ -2922,11 +2925,15 @@ draw_pass_1 = SubResource("SphereMesh_gibmh")
 
 [node name="Dressing3" parent="World" instance=ExtResource("42_cf5ma")]
 transform = Transform3D(0.43122, 0, 0.902247, 0, 1, 0, -0.902247, 0, 0.43122, -1.51009, -13.4462, -3.00252)
+range_max_amplitude = 0.5
+range_max_vel = 0.5
 
 [node name="Dressing2" parent="World" instance=ExtResource("42_cf5ma")]
 transform = Transform3D(0.971454, 0, -0.237228, 0, 1, 0, 0.237228, 0, 0.971454, 3.4458, -1.51436, 0.501133)
-range_max_amplitude = 2.0
-range_max_vel = 2.0
+range_min_amplitude = 0.05
+range_max_amplitude = 0.2
+range_min_vel = 0.05
+range_max_vel = 0.2
 
 [node name="platform-medium2" parent="World" instance=ExtResource("10_gv1mx")]
 transform = Transform3D(1.48883, 0, 0.1827, 0, 1.5, 0, -0.1827, 0, 1.48883, -12.9427, -12.9894, 4.85223)

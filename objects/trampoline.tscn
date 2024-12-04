@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c1hlbidp8utn1"]
+[gd_scene load_steps=17 format=4 uid="uid://c1hlbidp8utn1"]
 
 [ext_resource type="Script" path="res://objects/trampoline.gd" id="1_73nxn"]
 [ext_resource type="AudioStream" uid="uid://c74thugcgcetg" path="res://sounds/trampoline_bounce.mp3" id="3_0nmjc"]
@@ -116,6 +116,18 @@ albedo_color = Color(0.609277, 0.384028, 0.511773, 1)
 emission = Color(0.417887, 0.494354, 0.674223, 1)
 emission_energy_multiplier = 0.25
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qinf4"]
+albedo_color = Color(1, 0.875519, 0.996668, 1)
+distance_fade_mode = 1
+distance_fade_max_distance = 40.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ogjf1"]
+turbulence_enabled = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wc6ow"]
+radius = 0.25
+height = 0.5
+
 [node name="trampoline" type="Node3D"]
 script = ExtResource("1_73nxn")
 
@@ -149,5 +161,49 @@ transform = Transform3D(2.37789, 0, 0, 0, 1.59357, 0, 0, 0, 2.39104, 0, -0.39624
 mesh = SubResource("ArrayMesh_qtrna")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_yfskh")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.914195, -0.249146, 0.596771)
+material_override = SubResource("StandardMaterial3D_qinf4")
+amount = 100
+lifetime = 3.76
+interp_to_end = 1.0
+speed_scale = 1.8
+collision_base_size = 128.0
+process_material = SubResource("ParticleProcessMaterial_ogjf1")
+draw_pass_1 = SubResource("CapsuleMesh_wc6ow")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.607248, -0.187915, 0.884365)
+material_override = SubResource("StandardMaterial3D_qinf4")
+amount = 100
+lifetime = 3.76
+interp_to_end = 1.0
+speed_scale = 1.8
+collision_base_size = 128.0
+process_material = SubResource("ParticleProcessMaterial_ogjf1")
+draw_pass_1 = SubResource("CapsuleMesh_wc6ow")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.629585, -0.231209, -0.756546)
+material_override = SubResource("StandardMaterial3D_qinf4")
+amount = 100
+lifetime = 3.76
+interp_to_end = 1.0
+speed_scale = 1.8
+collision_base_size = 128.0
+process_material = SubResource("ParticleProcessMaterial_ogjf1")
+draw_pass_1 = SubResource("CapsuleMesh_wc6ow")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.888546, -0.312026, -0.715573)
+material_override = SubResource("StandardMaterial3D_qinf4")
+amount = 100
+lifetime = 3.76
+interp_to_end = 1.0
+speed_scale = 1.8
+collision_base_size = 128.0
+process_material = SubResource("ParticleProcessMaterial_ogjf1")
+draw_pass_1 = SubResource("CapsuleMesh_wc6ow")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
