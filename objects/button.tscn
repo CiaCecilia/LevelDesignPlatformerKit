@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/button.gd" id="2_ien80"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a52qj"]
-size = Vector3(0.4, 0.2, 0.4)
+size = Vector3(1.99609, 0.2, 1.87109)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0fkk3"]
 size = Vector3(0.9, 0.15, 0.9)
