@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://nle8jegvowt"]
+
+[ext_resource type="PackedScene" uid="uid://bn0iedr5b0xbv" path="res://models/core_models/platform-large.glb" id="1_c4xuu"]
+[ext_resource type="Script" path="res://scripts/damage_dealer.gd" id="2_kuinj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yhn17"]
+albedo_color = Color(0, 0.439216, 0.560784, 1)
+distance_fade_mode = 1
+
+[node name="platform-large" instance=ExtResource("1_c4xuu")]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+script = ExtResource("2_kuinj")
+
+[node name="platform-large2" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_yhn17")
