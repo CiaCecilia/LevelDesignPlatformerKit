@@ -99,14 +99,14 @@ point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_g6urx"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.1945, -18.9889, 2.70009, 0, 0, 0, 0, 0, 0, -14.8241, 8.78369, 15.0165),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.1945, -18.9889, 2.11838, 0, 0, 0, 0, 0, 0, -14.8241, 8.78369, 15.0165),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_gc2d6"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.2818, 15.4474, -5.43608, 0, 0, 0, 0, 0, 0, -22.6897, 9.5558, 5.98551, 0, 0, 0, 0, 0, 0, -7.98617, 0.451226, 16.9647, 0, 0, 0, 0, 0, 0, -0.97089, -7.73132, 8.52129, 0, 0, 0, 0, 0, 0, -5.27776, -12.8511, 7.20457, 0, 0, 0, 0, 0, 0, -8.02043, -12.6087, 4.23077, 0, 0, 0, 0, 0, 0, -4.99075, -12.0602, 9.85194, 0, 0, 0, 0, 0, 0, -6.82261, -12.4021, 6.46275),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.2818, 15.4474, -5.43608, 0, 0, 0, 0, 0, 0, -22.6897, 9.5558, 5.98551, 0, 0, 0, 0, 0, 0, -7.98617, 0.451226, 16.9647, 0, 0, 0, 0, 0, 0, 2.00994, -12.093, 15.5512, 0, 0, 0, 0, 0, 0, -5.27776, -12.8511, 7.20457, 0, 0, 0, 0, 0, 0, -8.02043, -12.6087, 4.23077, 0, 0, 0, 0, 0, 0, -4.99075, -12.0602, 9.85194, 0, 0, 0, 0, 0, 0, -6.82261, -12.4021, 6.46275),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
@@ -1085,6 +1085,7 @@ curve = SubResource("Curve3D_gc2d6")
 object_to_move = NodePath("../MovingTransportation_3")
 movement_speed = 3.0
 is_on_from_start = false
+stop_at_end = true
 
 [node name="checkpoint" parent="World/Part3" instance=ExtResource("34_b2vtl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4274, 15.6015, -7.98779)
@@ -3065,10 +3066,7 @@ parameters/looping = true
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -11.3433, 30.0728, 2.50953)
 
 [node name="DamageDealerArea3D" parent="." instance=ExtResource("50_6kq1h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1454, -5.2875, 11.0696)
-
-[node name="DamageDealerArea3D2" parent="." instance=ExtResource("50_6kq1h")]
-transform = Transform3D(0.0894122, -0.97195, 0.21753, 0.995795, 0.0916059, -1.11022e-16, -0.019927, 0.216615, 0.976054, -19.347, -17.2812, 13.344)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7393, -4.0221, 8.50604)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]

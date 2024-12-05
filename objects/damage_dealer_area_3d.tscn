@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/damage_dealer.gd" id="1_h7epr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_svceu"]
-size = Vector3(40, 1, 40)
+size = Vector3(31.7032, 1, 31.8813)
 
 [node name="DamageDealerArea3D" type="Area3D"]
 collision_layer = 8
@@ -12,7 +12,7 @@ monitorable = false
 script = ExtResource("1_h7epr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4058, 0, -11.9931)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25739, 0, -16.0524)
 shape = SubResource("BoxShape3D_svceu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
