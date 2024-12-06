@@ -7,7 +7,7 @@ albedo_color = Color(0, 0.439216, 0.560784, 1)
 distance_fade_mode = 1
 
 [node name="platform-large" instance=ExtResource("1_cbnxf")]
-transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+transform = Transform3D(5000, 0, 0, 0, 5000, 0, 0, 0, 5000, 0, 0, 0)
 
 [node name="platform-large2" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_yhn17")
