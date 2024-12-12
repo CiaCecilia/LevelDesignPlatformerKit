@@ -1,9 +1,9 @@
-[gd_scene load_steps=17 format=4 uid="uid://c1hlbidp8utn1"]
+[gd_scene load_steps=17 format=4 uid="uid://21swud7k4gw3"]
 
-[ext_resource type="Script" path="res://objects/trampoline.gd" id="1_73nxn"]
-[ext_resource type="AudioStream" uid="uid://c74thugcgcetg" path="res://sounds/trampoline_bounce.mp3" id="3_0nmjc"]
-[ext_resource type="PackedScene" uid="uid://1hx4wcwosemd" path="res://models/props/block-moving-large.glb" id="3_lbpl7"]
-[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="4_7bgmm"]
+[ext_resource type="Script" path="res://objects/trampoline.gd" id="1_4muir"]
+[ext_resource type="AudioStream" uid="uid://c74thugcgcetg" path="res://sounds/trampoline_bounce.mp3" id="2_r133s"]
+[ext_resource type="PackedScene" uid="uid://1hx4wcwosemd" path="res://models/props/block-moving-large.glb" id="3_ayisk"]
+[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="4_sfxvc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t50jv"]
 size = Vector3(2, 0.5, 2)
@@ -75,7 +75,7 @@ _data = {
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfcvm"]
 resource_name = "colormap"
 cull_mode = 2
-albedo_texture = ExtResource("4_7bgmm")
+albedo_texture = ExtResource("4_sfxvc")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6y5in"]
 _surfaces = [{
@@ -129,7 +129,7 @@ radius = 0.25
 height = 0.5
 
 [node name="trampoline" type="Node3D"]
-script = ExtResource("1_73nxn")
+script = ExtResource("1_4muir")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -146,10 +146,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0)
 shape = SubResource("BoxShape3D_rnm3k")
 
 [node name="TrampolineAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("3_0nmjc")
+stream = ExtResource("2_r133s")
 
-[node name="block-extended" parent="." instance=ExtResource("3_lbpl7")]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0.26553, 0)
+[node name="block-extended" parent="." instance=ExtResource("3_ayisk")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 1.09348, 0)
 
 [node name="TrampolineAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

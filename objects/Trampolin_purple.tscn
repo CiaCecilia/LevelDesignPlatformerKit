@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhbp36rfjnp61"]
+
+[ext_resource type="PackedScene" uid="uid://1hx4wcwosemd" path="res://models/props/block-moving-large.glb" id="1_j4ent"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gu6in"]
+albedo_color = Color(0.181247, 0.0669576, 0.157259, 1)
+
+[node name="block-moving-large2" instance=ExtResource("1_j4ent")]
+
+[node name="block-moving-large" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gu6in")

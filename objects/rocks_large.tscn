@@ -6,13 +6,13 @@
 albedo_color = Color(0.16972, 0.241224, 0.21793, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rjh6o"]
-size = Vector3(1.09183, 0.767039, 0.838518)
+size = Vector3(1.09183, 0.726916, 0.838518)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d50ks"]
-size = Vector3(2.47534, 1.80917, 1.52286)
+size = Vector3(2.47534, 1.37124, 1.52286)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uqcye"]
-size = Vector3(0.331757, 0.18811, 0.292908)
+size = Vector3(0.331757, 0.121399, 0.292908)
 
 [node name="rocks2" instance=ExtResource("1_bhc6b")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
@@ -23,13 +23,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6cuyi")
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
-transform = Transform3D(0.121858, 0, 0.261374, 0, 0.548516, 0, -0.204216, 0, 0.155965, 0.111738, 0.188066, -0.0936067)
+transform = Transform3D(0.121858, 0, 0.261374, 0, 0.548516, 0, -0.204216, 0, 0.155965, 0.111738, 0.19907, -0.0936067)
 shape = SubResource("BoxShape3D_rjh6o")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
-transform = Transform3D(0.0142735, 0, -0.15144, 0, 0.203182, 0, 0.117692, 0, 0.0183665, 0.113138, 0.0883905, 0.122919)
+transform = Transform3D(0.0142735, 0, -0.15144, 0, 0.203182, 0, 0.117692, 0, 0.0183665, 0.113138, 0.13288, 0.122919)
 shape = SubResource("BoxShape3D_d50ks")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104672, 0.0272827, 0.0487366)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104672, 0.0606383, 0.0487366)
 shape = SubResource("BoxShape3D_uqcye")
