@@ -1197,25 +1197,46 @@ transform = Transform3D(-0.0387872, -0.305583, 0.951376, 0.995774, 0.0674997, 0.
 [node name="SpikeChallange" type="Node3D" parent="World/Part3"]
 
 [node name="spike-block-wide2" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
-transform = Transform3D(-0.461945, -0.772841, 0.435113, 0.886904, -0.401069, 0.229225, -0.0026437, 0.491794, 0.870708, -11.5795, 23.42, -17.7842)
+transform = Transform3D(-0.461945, -0.772841, 0.435113, 0.886904, -0.401069, 0.229225, -0.0026437, 0.491794, 0.870708, -26.5593, 4.68829, -7.9633)
 
 [node name="spike-block-wide3" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
-transform = Transform3D(-0.363946, -0.651325, 0.665822, 0.646543, -0.691231, -0.322772, 0.670466, 0.313011, 0.672681, -18.2372, 15.674, -16.05)
+transform = Transform3D(-0.363946, -0.651325, 0.665822, 0.646543, -0.691231, -0.322772, 0.670466, 0.313011, 0.672681, -21.6386, 15.674, -16.05)
 
 [node name="spike-block-wide4" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
-transform = Transform3D(-0.228855, 0.605406, 0.762305, -0.558146, -0.72319, 0.406778, 0.797558, -0.332385, 0.503411, -18.6217, 17.8998, -17.8999)
+transform = Transform3D(-0.228855, 0.605406, 0.762305, -0.558146, -0.72319, 0.406778, 0.797558, -0.332385, 0.503411, -24.2215, 17.8998, -12.8083)
 
 [node name="spike-block-wide6" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
-transform = Transform3D(0.00468054, -0.870695, 0.491801, 0.606599, -0.388515, -0.693609, 0.794994, 0.301572, 0.526344, -20.0295, 17.6563, -14.5726)
+transform = Transform3D(0.00468054, -0.870695, 0.491801, 0.606599, -0.388515, -0.693609, 0.794994, 0.301572, 0.526344, -22.1511, 12.5444, -14.5726)
 
 [node name="spike-block-wide9" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
 transform = Transform3D(-0.166637, -0.525336, 0.834418, 0.942777, 0.162971, 0.290881, -0.288796, 0.835142, 0.468118, -14.6938, 18.474, -20.7537)
 
 [node name="spike-block-wide10" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
-transform = Transform3D(-0.0633765, -0.504556, 0.86105, 0.997962, -0.0384596, 0.0509173, 0.00742501, 0.862522, 0.505965, -14.2572, 20.498, -12.7544)
+transform = Transform3D(-0.0633765, -0.504556, 0.86105, 0.997962, -0.0384596, 0.0509173, 0.00742501, 0.862522, 0.505965, -25.4577, 12.5986, -15.5435)
 
 [node name="spike-block-wide12" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
-transform = Transform3D(-0.0633765, -0.504556, 0.86105, 0.997962, -0.0384596, 0.0509173, 0.00742501, 0.862522, 0.505965, -15.0774, 19.5508, -16.9519)
+transform = Transform3D(-0.0633765, -0.504556, 0.86105, 0.997962, -0.0384596, 0.0509173, 0.00742501, 0.862522, 0.505965, -21.8072, 19.5508, -16.9519)
+
+[node name="spike-block-wide5" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
+transform = Transform3D(-0.461945, -0.772841, 0.435113, 0.886904, -0.401069, 0.229225, -0.0026437, 0.491794, 0.870708, -13.1875, 23.42, -17.7842)
+
+[node name="spike-block-wide7" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
+transform = Transform3D(-0.363946, -0.651325, 0.665822, 0.646543, -0.691231, -0.322772, 0.670466, 0.313011, 0.672681, -24.3076, 12.7475, -10.8362)
+
+[node name="spike-block-wide8" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
+transform = Transform3D(-0.228855, 0.605406, 0.762305, -0.558146, -0.72319, 0.406778, 0.797558, -0.332385, 0.503411, -20.2297, 17.8998, -17.8999)
+
+[node name="spike-block-wide11" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
+transform = Transform3D(0.00468054, -0.870695, 0.491801, 0.606599, -0.388515, -0.693609, 0.794994, 0.301572, 0.526344, -24.5262, 10.5563, -13.1255)
+
+[node name="spike-block-wide13" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
+transform = Transform3D(-0.166637, -0.525336, 0.834418, 0.942777, 0.162971, 0.290881, -0.288796, 0.835142, 0.468118, -16.3018, 18.474, -20.7537)
+
+[node name="spike-block-wide14" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
+transform = Transform3D(-0.0633765, -0.504556, 0.86105, 0.997962, -0.0384596, 0.0509173, 0.00742501, 0.862522, 0.505965, -25.1513, 7.46956, -7.99081)
+
+[node name="spike-block-wide15" parent="World/Part3/SpikeChallange" instance=ExtResource("44_67iok")]
+transform = Transform3D(-0.0633765, -0.504556, 0.86105, 0.997962, -0.0384596, 0.0509173, 0.00742501, 0.862522, 0.505965, -20.3806, 15.9003, -17.4783)
 
 [node name="coin" parent="World/Part3/SpikeChallange" instance=ExtResource("31_bbfjm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3489, 18.7558, -14.4702)
