@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://sxa7kji72xvl"]
+
+[ext_resource type="PackedScene" uid="uid://drdt1lv4menw6" path="res://models/props/grass.glb" id="1_p5103"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q27i8"]
+albedo_color = Color(1.66051e-06, 0.482737, 0.240786, 1)
+
+[node name="grass2" instance=ExtResource("1_p5103")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="grass" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_q27i8")

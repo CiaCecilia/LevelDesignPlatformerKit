@@ -39,12 +39,13 @@ func _ready() -> void:
 	can_move = true
 
 func _physics_process(delta):
+	handle_gravity(delta)
+	
 	if can_move:
 		# Handle functions
 
 		handle_controls(delta)
-		handle_gravity(delta)
-
+		#handle_gravity(delta)
 		handle_effects(delta)
 
 		# Movement

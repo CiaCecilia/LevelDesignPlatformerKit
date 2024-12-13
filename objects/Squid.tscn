@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=4 uid="uid://21swud7k4gw3"]
+[gd_scene load_steps=16 format=4 uid="uid://21swud7k4gw3"]
 
 [ext_resource type="Script" path="res://objects/trampoline.gd" id="1_4muir"]
 [ext_resource type="AudioStream" uid="uid://c74thugcgcetg" path="res://sounds/trampoline_bounce.mp3" id="2_r133s"]
-[ext_resource type="PackedScene" uid="uid://1hx4wcwosemd" path="res://models/props/block-moving-large.glb" id="3_ayisk"]
 [ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="4_sfxvc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t50jv"]
@@ -10,67 +9,6 @@ size = Vector3(2, 0.5, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rnm3k"]
 size = Vector3(1.75, 0.5, 1.75)
-
-[sub_resource type="Animation" id="Animation_hgpsv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("block-extended:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("block-extended:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(2, 1, 2)]
-}
-
-[sub_resource type="Animation" id="Animation_1iltb"]
-resource_name = "bounce"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("block-extended:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("block-extended:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.133333, 0.166667, 0.266667, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(2, 1, 2), Vector3(1.75, 2, 1.75), Vector3(1.75, 2.1, 1.75), Vector3(1.75, 2, 1.75), Vector3(2.25, 0.9, 2.25), Vector3(2, 1, 2)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_leh4b"]
-_data = {
-"RESET": SubResource("Animation_hgpsv"),
-"bounce": SubResource("Animation_1iltb")
-}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfcvm"]
 resource_name = "colormap"
@@ -128,6 +66,42 @@ turbulence_enabled = true
 radius = 0.25
 height = 0.5
 
+[sub_resource type="Animation" id="Animation_hmw4p"]
+resource_name = "bounce"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.2, 0.8, 1.2), Vector3(0.8, 1.2, 0.8), Vector3(0.833, 1, 0.833)]
+}
+
+[sub_resource type="Animation" id="Animation_7nub2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l5fjw"]
+_data = {
+"RESET": SubResource("Animation_7nub2"),
+"bounce": SubResource("Animation_hmw4p")
+}
+
 [node name="trampoline" type="Node3D"]
 script = ExtResource("1_4muir")
 
@@ -142,19 +116,11 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.928204, 0)
 shape = SubResource("BoxShape3D_rnm3k")
 
 [node name="TrampolineAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_r133s")
-
-[node name="block-extended" parent="." instance=ExtResource("3_ayisk")]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 1.09348, 0)
-
-[node name="TrampolineAnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_leh4b")
-}
 
 [node name="cube2" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.37789, 0, 0, 0, 1.59357, 0, 0, 0, 2.39104, 0, -0.396243, 0)
@@ -205,5 +171,10 @@ speed_scale = 1.8
 collision_base_size = 128.0
 process_material = SubResource("ParticleProcessMaterial_ogjf1")
 draw_pass_1 = SubResource("CapsuleMesh_wc6ow")
+
+[node name="TrampolineAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l5fjw")
+}
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
