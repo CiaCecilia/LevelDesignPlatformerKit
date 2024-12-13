@@ -27,21 +27,27 @@ var latest_checkpoint : Vector3
 @onready var model = $Character
 @onready var animation = $Character/AnimationPlayer
 
+var can_move = false
+
 # Functions
 
 func _ready() -> void:
 	latest_checkpoint = global_position
+	
+	var timer = get_tree().create_timer(5.0)
+	await timer.timeout
+	can_move = true
 
 func _physics_process(delta):
+	if can_move:
+		# Handle functions
 
-	# Handle functions
+		handle_controls(delta)
+		handle_gravity(delta)
 
-	handle_controls(delta)
-	handle_gravity(delta)
+		handle_effects(delta)
 
-	handle_effects(delta)
-
-	# Movement
+		# Movement
 
 	var applied_velocity: Vector3
 
