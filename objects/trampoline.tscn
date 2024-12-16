@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=4 uid="uid://c1hlbidp8utn1"]
 
 [ext_resource type="Script" path="res://objects/trampoline.gd" id="1_73nxn"]
-[ext_resource type="AudioStream" uid="uid://c74thugcgcetg" path="res://sounds/trampoline_bounce.mp3" id="3_0nmjc"]
+[ext_resource type="AudioStream" uid="uid://lvb3fnapxlog" path="res://sounds/ftus_musical_instrument_gong_gamelan_hit_soft_001_514.mp3" id="2_qbrv0"]
 [ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="4_7bgmm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t50jv"]
@@ -66,21 +66,6 @@ turbulence_enabled = true
 radius = 0.25
 height = 0.5
 
-[sub_resource type="Animation" id="Animation_hmw4p"]
-resource_name = "bounce"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(1, 1, 1), Vector3(1.2, 0.8, 1.2), Vector3(0.8, 1.2, 0.8), Vector3(0.833, 1, 0.833)]
-}
-
 [sub_resource type="Animation" id="Animation_7nub2"]
 length = 0.001
 tracks/0/type = "value"
@@ -94,6 +79,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hmw4p"]
+resource_name = "bounce"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.2, 0.8, 1.2), Vector3(0.8, 1.2, 0.8), Vector3(0.833, 1, 0.833)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l5fjw"]
@@ -120,7 +120,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.950042, 0)
 shape = SubResource("BoxShape3D_rnm3k")
 
 [node name="TrampolineAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("3_0nmjc")
+stream = ExtResource("2_qbrv0")
 
 [node name="cube2" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.37789, 0, 0, 0, 1.59357, 0, 0, 0, 2.39104, 0, -0.396243, 0)
