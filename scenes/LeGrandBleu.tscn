@@ -709,7 +709,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3404, -2.473, -4.42864)
 [node name="Bounce_Challange" type="Node3D" parent="World/Part2"]
 
 [node name="trampoline_2" parent="World/Part2/Bounce_Challange" instance=ExtResource("31_h77ag")]
-transform = Transform3D(0.733809, 0.284353, 0.616983, -0.194823, 0.958124, -0.209864, -0.650821, 0.0337977, 0.758478, -13.6486, 7.75691, 17.27)
+transform = Transform3D(0.733809, 0.284353, 0.616983, -0.194823, 0.958124, -0.209864, -0.650821, 0.0337977, 0.758479, -13.6486, 7.75691, 17.27)
 
 [node name="coin2" parent="World/Part2/Bounce_Challange/trampoline_2" instance=ExtResource("31_bbfjm")]
 transform = Transform3D(0.733809, -0.194823, -0.650822, 0.284353, 0.958124, 0.0337976, 0.616983, -0.209864, 0.758479, 0.0716839, 1.30502, -0.0590849)
@@ -739,7 +739,7 @@ transform = Transform3D(0.209966, 0.258687, -0.942865, 0.0381072, 0.961464, 0.27
 transform = Transform3D(1, -7.45058e-09, 1.49012e-08, 0, 1, 1.49012e-08, 0, 3.72529e-09, 1, 0.0600414, 1.5149, 0.429001)
 
 [node name="trampoline_1" parent="World/Part2/Bounce_Challange" instance=ExtResource("31_h77ag")]
-transform = Transform3D(-0.00669155, 0.272714, -0.962072, -0.140156, 0.952341, 0.27093, 0.990107, 0.136653, 0.0318499, -13.3023, -9.64136, 2.5093)
+transform = Transform3D(-0.00669153, 0.272714, -0.962072, -0.140156, 0.952341, 0.27093, 0.990107, 0.136653, 0.0318499, -13.3023, -9.64136, 2.5093)
 
 [node name="coin" parent="World/Part2/Bounce_Challange/trampoline_1" instance=ExtResource("31_bbfjm")]
 transform = Transform3D(1, -2.98023e-08, 0, 0, 1, -5.07571e-08, 0, 1.72295e-08, 1, -0.247389, 1.68097, 0.478218)
